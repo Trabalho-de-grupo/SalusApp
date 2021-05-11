@@ -1,3 +1,20 @@
-body{
-    background: black;
+*{
+    margin:0;
+    padding:0;
+}
+.back{
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(#CBC0DC,#F6B8C3);
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+
+}
+.form-box{
+    width: 426px;
+    height: 622px;
+    position: relative;
+    margin: 6% auto;
+    background:#EEEEEE;
 }
