@@ -13,8 +13,9 @@
 }
 .form-box{
     width: 426px;
-    height: 622px;
+    height: 450px;
     position: relative;
     margin: 6% auto;
     background:#EEEEEE;
+    padding:5px;
 }
