@@ -1,6 +1,15 @@
+@font-face {
+    font-family: montserrat-regular;
+    src: url(../fonts/Montserrat-Regular.ttf);
+}
+@font-face {
+    font-family: montserrat-bold;
+    src: url(../fonts/Montserrat-Bold.ttf);
+}
 *{
     margin:0;
     padding:0;
+    font-family: montserrat-regular;
 }
 .back{
     height: 100%;
@@ -12,10 +21,68 @@
 
 }
 .form-box{
-    width: 426px;
-    height: 450px;
+    width: 380px;
+    height: 480px;
     position: relative;
     margin: 6% auto;
     background:#EEEEEE;
     padding:5px;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 1.5px 1.5px 1.5px 1.5px #A8A8A7;
+}
+
+.button-box{
+    width:220px;
+    margin:35px auto;
+    position:relative;
+    border:1;
+    border-color: #B589B0;
+    border-radius: 15px;
+    border-style:solid;
+}
+.login-btn{
+    padding:10px 25px ;
+    cursor: pointer;
+    background:transparent;
+    border:0;
+    outline: none;
+    position: relative;
+}
+#btn{
+    top:0;
+    left:0;
+    position: absolute;
+    width:110px;
+    height: 100%;
+    background: linear-gradient(to right,#8164A2,#CBC0DC);
+    border-radius: 13px;
+    transition: .5s;
+}
+.input-group{
+    top:180px;
+    position: absolute;
+    width: 280px;
+    transition: .5s;
+}
+.input-field{
+    width:100%;
+    padding:10px 0 ;
+    margin: 5px 0;
+    border-left:0;
+    border-top:0;
+    border-right:0;
+    border-bottom: 1px solid #B589B0;
+    outline:none;
+    background:transparent;
+}
+.submit-btn{
+    width: 85%;
+    padding:10px 30px;
+    cursor: pointer;
+    display: block;
+    margin:auto;
+    background: linear-gradient(to right, #8164A2,#CBC0DC);
+    border:0;
+    outline: none;
+    border-radius: 15px;
 }
