@@ -1,20 +1,19 @@
 function registoFunction()
 { 
-    let nomeUtilizador = document.querySelector("#txtUtilizador")
-    let passUtilizador = document.querySelector("#txtPassword")
+    localStorage.setItem("nomeUtilizador", document.getElementById("txtUtilizador").value)
+    localStorage.setItem("passUtilizador", document.getElementById("txtPassword").value)
+}
 
-    console.log(nomeUtilizador.value)
-    console.log(passUtilizador.value)
+function registoTable()
+{
+    const tableUtilizador = document.getElementById("tableUtilizador")
 
-    let tbodyUtilizador = document.querySelector("#tbodyUtilizador")
-    alert("oi2")
-
-    tbodyUtilizador.innerHTML += `
-    <tr>
-        <td scope="row">${nomeUtilizador.value}</td>
-        <td>${passUtilizador.value}</td>
-    </tr>
+    tableUtilizador.innerHTML += `
+        <tbody>
+            <tr>
+                <td scope="row">${localStorage.getItem("nomeUtilizador")}</td>
+                <td>${localStorage.getItem("passUtilizador")}</td>
+            </tr>
+        </tbody>
     `
-
-    alert("oi")
 }
