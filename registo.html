@@ -14,32 +14,34 @@
 
 <body>
     <div class="back">
-    <h1>SalusApp</h1>
+        <div class="form-box">
+            <div class="button-box">
+                <div id="btn"></div>
+                <button type="button" class="login-btn" onclick="login()">Log in</button>
+                <button type="button" class="login-btn" onclick="registar()">Registar</button>
+            </div>
+            <form id="login" class="input-group">
+                <label for="utilizador"></label>
+                <input type="text" class="input-field" name="utilizador" id="txtUtilizador" placeholder="Nome" required>
+                
+                <label for="password"></label>
+                <input type="password" class="input-field" placeholder="Password" name="password" id="txtPassword" required>
 
-    <div class="form-box">
-    <form>
-        <div class="form-group">
-            <label for="utilizador"></label>
-            <input type="text" class="form-control" name="utilizador" id="txtUtilizador" aria-describedby="helpId"
-                placeholder="Nome">
+                <button type="button" class="submit-btn" onclick="registoFunction()">Log in</button>
+            </form>
+
+            <form id="registar" class="input-group">
+                <input type="text" class="input-field" placeholder="Nome" required>
+                <input type="text" class="input-field" placeholder="Email" required>
+                <input type="password" class="input-field" placeholder="Password" required>
+                <input type="password" class="input-field" placeholder="Confirmar Password" required>
+                <button type="button" class="submit-btn">Registar</button>
+            </form>
         </div>
-
-        <div class="form-group">
-            <label for="password"></label>
-            <input type="password" class="form-control" name="password" id="txtPassword" aria-describedby="helpId"
-                placeholder="Password">
-        </div>
-
-        <br>
-
-        <div>
-            <button type="button" class="btn btn-primary" onclick="registoFunction()">Login</button>
-        </div>
-    </form>
-    </div>
     </div>
 
 </body>
 
 <script src="js/registo.js"></script>
+
 </html>
