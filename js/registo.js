@@ -5,7 +5,7 @@ var z= document.getElementById("btn");
 function registar(){
     x.style.left ="-400px";
     y.style.left="50px";
-    z.style.left="104px";
+    z.style.left="104px";    
 }
 
 function login(){
@@ -13,11 +13,6 @@ function login(){
     y.style.left="450px";
     z.style.left="0";
 }
-
-
-
-
-
 
 function registoFunction()
 { 
