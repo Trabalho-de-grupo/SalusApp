@@ -11,6 +11,17 @@
     padding:0;
     font-family: montserrat-regular;
 }
+
+header{
+    height: 5%;
+    width: 100%;
+    background-image: linear-gradient(#CBC0DC,#F6B8C3);
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+}
+
+
 .back{
     height: 100%;
     width: 100%;
@@ -18,8 +29,12 @@
     background-position: center;
     background-size: cover;
     position: absolute;
-
 }
+
+.fundo{
+    background-image:url(pexels-monstera-5996966.jpg);
+}
+
 .form-box{
     width: 380px;
     height: 480px;
