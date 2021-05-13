@@ -120,13 +120,6 @@ header{
     color:white;
 }
 
-.icon{
-    position: relative;
-    top: -800px;
-    padding: 100px;
-    margin: 490px;
-}
-
 .cabeçalho{
     display: flex;
     align-items: center;
@@ -135,5 +128,12 @@ header{
     margin: -20px;;
     color:white;
     font-size: 20px;
+}
+
+.icon {
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
 }
 
