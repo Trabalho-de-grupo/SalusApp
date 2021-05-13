@@ -32,7 +32,9 @@ header{
 }
 
 .fundo{
-    background-image:url(pexels-monstera-5996966.jpg);
+    background-image:url(..img/pexels-monstera-5996966.jpg);
+    padding: 200px;
+    margin: 100px;
 }
 
 .form-box{
