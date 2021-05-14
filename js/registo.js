@@ -2,17 +2,6 @@ var x = document.getElementById("login");
 var y = document.getElementById("registar");
 var z = document.getElementById("btn");
 
-var users = []
-
-class User {
-    constructor(id, nome, email, pass) {
-        this.id = id;
-        this.nome = nome;
-        this.email = email;
-        this.pass = pass;
-    }
-}
-
 function registar() {
     x.style.left = "-400px";
     y.style.left = "50px";
@@ -25,6 +14,17 @@ function login() {
     z.style.left = "0";
 }
 
+/*
+var users = []
+
+class User {
+    constructor(id, nome, email, pass) {
+        this.id = id;
+        this.nome = nome;
+        this.email = email;
+        this.pass = pass;
+    }
+}
 function confirmarRegisto() {
     let nome = document.getElementById("txtRegisterNome").value
     let email = document.getElementById("txtRegisterEmail").value
@@ -55,7 +55,6 @@ function confirmarRegisto() {
 
 
 
-/*
 
 
 function registoFunction() {

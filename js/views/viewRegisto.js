@@ -31,10 +31,10 @@ export default class UserView {
 
             try {
                 if (this.registerPassword.value !== this.registerPassword2.value) {
-                    throw Error('Password and Confirm Password are not equal');
+                    throw Error('As Passwords nao coincidem');
                 }
                 this.userController.register(this.registerUsername.value, this.registerPassword.value);
-                this.displayMessage('User registered with success!', 'success');
+                this.displayMessage('Registado com sucesso!', 'success');
             } catch (e) {
                 this.displayMessage(e, 'danger');
             }
@@ -42,9 +42,27 @@ export default class UserView {
     }
 
 
+    bindLoginForm() {
+        this.loginButton.addEventListener('click', () => {
+            try {
+                this.userController.login(this.loginUsername.value, this.loginPassword.value);
+                this.displayMessage('Registado com sucesso!', 'success');
+                
+
+            } catch (e) {
+                this.displayMessage(e, 'danger');
+            }
+        });
+
+        this.logoutButton.addEventListener('click', () => {
+            this.userController.logout();
+            this.updateButtons('logout');
+            location.reload()
+        });
+    }
 
 
-    
+
     checkLoginStatus() {
         if (this.userController.isLogged()) {
             this.updateButtons('login');
