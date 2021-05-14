@@ -5,15 +5,16 @@ export default class UserView {
         this.userController = new UserController();
 
         // register DOM
-        this.registerUsername = document.getElementById('txtRegisterUsername');
+        this.registerUsername = document.getElementById('txtRegisterNome');
+        this.registerEmail = document.getElementById('txtRegisterEmail');
         this.registerPassword = document.getElementById('txtRegisterPassword');
-        this.registerPassword2 = document.getElementById('txtConfirmRegisterPassword');
+        this.registerPassword2 = document.getElementById('txtRegisterConfPassword');
         this.registerButton = document.getElementById('btnRegister');
         this.bindRegisterForm();
 
         // login/logout DOM
-        this.loginUsername = document.getElementById('txtUsername');
-        this.loginPassword = document.getElementById('txtPassword');
+        this.loginNome = document.getElementById('txtLoginNome');
+        this.loginPassword = document.getElementById('txtLoginPassword');
         this.loginButton = document.getElementById('btnLogin');
         this.logoutButton = document.getElementById('btnLogout');
         this.bindLoginForm();
