@@ -126,8 +126,6 @@ header{
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 30px;
-    margin: -20px;;
     color:white;
     font-size: 20px;
 }
@@ -137,5 +135,11 @@ header{
     display:block;
     margin-left: auto;
     margin-right: auto;
+}
+.fundo{
+    background-image: url(../img/fundo.jpg);
+    background-position: center;
+    background-size: cover;
+    position: absolute;
 }
 
