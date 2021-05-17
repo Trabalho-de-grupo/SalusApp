@@ -1,4 +1,4 @@
-import UserController from '../controllers/controllersRegisto.js'
+import UserController from '../controllers/controllerRegisto.js'
 
 export default class UserView {
     constructor() {
@@ -11,6 +11,8 @@ export default class UserView {
         this.registerPassword2 = document.getElementById('txtRegisterConfPassword');
         this.registerButton = document.getElementById('btnRegister');
         this.bindRegisterForm();
+
+        alert("oi1")
 
         // Inputs Login
         this.loginNome = document.getElementById('txtLoginNome');
@@ -47,7 +49,7 @@ export default class UserView {
             try {
                 this.userController.login(this.loginUsername.value, this.loginPassword.value);
                 this.displayMessage('Registado com sucesso!', 'success');
-                
+
 
             } catch (e) {
                 this.displayMessage(e, 'danger');
@@ -72,8 +74,12 @@ export default class UserView {
     }
 
     displayMessage(message, type) {
+
+        console.log(`alert: ${type} message: ${message}`);
         this.messages.innerHTML =
             `<div class="alert alert-${type}" role="alert">${message}</div>`;
+        
+        alert("oi")
     }
 
     updateButtons(event) {
