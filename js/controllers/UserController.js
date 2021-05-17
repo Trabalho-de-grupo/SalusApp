@@ -1,4 +1,4 @@
-import UserModel from '../models/modelRegisto.js'
+import UserModel from '../models/UserModel.js'
 
 export default class UserController {
 
@@ -8,7 +8,7 @@ export default class UserController {
 
     register(username, password) {
         if (this.users.find(user => user.username === username)) {
-            throw Error(`O nome, "${username}" ja esta a ser utilizado!`);
+            throw Error(`User with username "${username}" already exists!`);
         } else {
             const newId = this.users.length > 0 ? this.users[this.users.length - 1].id + 1 : 1
             this.users.push(new UserModel(newId, username, password));
@@ -21,7 +21,7 @@ export default class UserController {
             sessionStorage.setItem('loggedUser', username);
             return true;
         } else {
-            throw Error('Login Invalido!');
+            throw Error('Invalid login!');
         }
     }
 

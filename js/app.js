@@ -1,4 +1,4 @@
-import UserView from '../views/viewRegisto.js'
+import UserView from './views/UserView.js'
 
 class App {
     constructor() {
@@ -15,7 +15,6 @@ class App {
     }
 
     #importDataFixtures() {
-        /* 
         const users = [
             {
                 id: 1,
@@ -28,8 +27,7 @@ class App {
                 password: 'pass2'
             }
         ];
-        */
-        
+
         // Load the fixtures in case there is no data in the local storage 
         if (!localStorage.users) {
             localStorage.setItem('users', JSON.stringify(users));

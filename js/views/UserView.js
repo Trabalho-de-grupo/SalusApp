@@ -1,30 +1,24 @@
-import UserController from '../controllers/controllerRegisto.js'
+import UserController from '../controllers/UserController.js'
 
 export default class UserView {
     constructor() {
         this.userController = new UserController();
 
-        // Inputs Registo
-        this.registerNome = document.getElementById('txtRegisterNome');
-        this.registerEmail = document.getElementById('txtRegisterEmail');
+        // register DOM
+        this.registerUsername = document.getElementById('txtRegisterUsername');
         this.registerPassword = document.getElementById('txtRegisterPassword');
-        this.registerPassword2 = document.getElementById('txtRegisterConfPassword');
+        this.registerPassword2 = document.getElementById('txtConfirmRegisterPassword');
         this.registerButton = document.getElementById('btnRegister');
         this.bindRegisterForm();
 
-        alert("oi1")
-
-        // Inputs Login
-        this.loginNome = document.getElementById('txtLoginNome');
-        this.loginPassword = document.getElementById('txtLoginPassword');
+        // login/logout DOM
+        this.loginUsername = document.getElementById('txtUsername');
+        this.loginPassword = document.getElementById('txtPassword');
         this.loginButton = document.getElementById('btnLogin');
         this.logoutButton = document.getElementById('btnLogout');
         this.bindLoginForm();
 
-        // Mensagem de Erro
         this.messages = document.querySelector('#messages')
-
-        //Confirmar Sessão
         this.checkLoginStatus();
     }
 
@@ -33,23 +27,28 @@ export default class UserView {
 
             try {
                 if (this.registerPassword.value !== this.registerPassword2.value) {
-                    throw Error('As Passwords nao coincidem');
+                    throw Error('Password and Confirm Password are not equal');
                 }
                 this.userController.register(this.registerUsername.value, this.registerPassword.value);
-                this.displayMessage('Registado com sucesso!', 'success');
+                this.displayMessage('User registered with success!', 'success');
             } catch (e) {
                 this.displayMessage(e, 'danger');
             }
         });
     }
 
-
     bindLoginForm() {
         this.loginButton.addEventListener('click', () => {
             try {
                 this.userController.login(this.loginUsername.value, this.loginPassword.value);
-                this.displayMessage('Registado com sucesso!', 'success');
+                this.displayMessage('User logged in with success!', 'success');
 
+                // Wait 1 second before reloading, so the user can see the login success message
+                setTimeout(() => {
+                    this.updateButtons('login');
+                    location.reload()
+                },
+                    1000);
 
             } catch (e) {
                 this.displayMessage(e, 'danger');
@@ -74,12 +73,8 @@ export default class UserView {
     }
 
     displayMessage(message, type) {
-
-        console.log(`alert: ${type} message: ${message}`);
         this.messages.innerHTML =
             `<div class="alert alert-${type}" role="alert">${message}</div>`;
-        
-        alert("oi")
     }
 
     updateButtons(event) {
@@ -93,5 +88,4 @@ export default class UserView {
                 this.logoutButton.style.visibility = 'hidden'
         }
     }
-
 }

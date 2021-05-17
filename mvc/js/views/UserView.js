@@ -5,16 +5,15 @@ export default class UserView {
         this.userController = new UserController();
 
         // register DOM
-        this.registerUsername = document.getElementById('txtRegisterNome');
-        this.registerEmail = document.getElementById('txtRegisterEmail');
+        this.registerUsername = document.getElementById('txtRegisterUsername');
         this.registerPassword = document.getElementById('txtRegisterPassword');
-        this.registerPassword2 = document.getElementById('txtRegisterConfPassword');
+        this.registerPassword2 = document.getElementById('txtConfirmRegisterPassword');
         this.registerButton = document.getElementById('btnRegister');
         this.bindRegisterForm();
 
         // login/logout DOM
-        this.loginNome = document.getElementById('txtLoginNome');
-        this.loginPassword = document.getElementById('txtLoginPassword');
+        this.loginUsername = document.getElementById('txtUsername');
+        this.loginPassword = document.getElementById('txtPassword');
         this.loginButton = document.getElementById('btnLogin');
         this.logoutButton = document.getElementById('btnLogout');
         this.bindLoginForm();
@@ -28,10 +27,10 @@ export default class UserView {
 
             try {
                 if (this.registerPassword.value !== this.registerPassword2.value) {
-                    throw Error('As Passwords nao coincidem');
+                    throw Error('Password and Confirm Password are not equal');
                 }
                 this.userController.register(this.registerUsername.value, this.registerPassword.value);
-                this.displayMessage('Registado com sucesso!', 'success');
+                this.displayMessage('User registered with success!', 'success');
             } catch (e) {
                 this.displayMessage(e, 'danger');
             }
