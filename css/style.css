@@ -145,3 +145,11 @@ header{
     position: absolute;
 }
 
+.menu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    margin: 10px;;
+    color:white;
+}
