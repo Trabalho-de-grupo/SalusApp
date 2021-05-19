@@ -145,3 +145,25 @@ header{
     position: absolute;
 }
 
+.comecar{
+    padding:10px 30px;
+    cursor: pointer;
+    display:block;
+    margin:auto;
+    background: #F6B8C3;
+    border:0;
+    outline: none;
+    text-decoration: underline;
+    text-decoration-color: #F6B8C3;
+    color: white;
+    border-radius: 15px;
+}
+
+.menu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    margin: 10px;;
+    color:white;
+}

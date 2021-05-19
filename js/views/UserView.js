@@ -6,6 +6,7 @@ export default class UserView {
 
         // register DOM
         this.registerUsername = document.getElementById('txtRegisterUsername');
+        this.registerEmail = document.getElementById('txtRegisterEmail');
         this.registerPassword = document.getElementById('txtRegisterPassword');
         this.registerPassword2 = document.getElementById('txtConfirmRegisterPassword');
         this.registerButton = document.getElementById('btnRegister');
@@ -29,7 +30,10 @@ export default class UserView {
                 if (this.registerPassword.value !== this.registerPassword2.value) {
                     throw Error('Password and Confirm Password are not equal');
                 }
-                this.userController.register(this.registerUsername.value, this.registerPassword.value);
+                if (this.registerUsername.value == '' || this.registerEmail.value == '' || this.registerPassword.value == '') {
+                    throw Error ('Preencha todos os campos!');
+                }
+                this.userController.register(this.registerUsername.value, this.registerEmail.value, this.registerPassword.value);
                 this.displayMessage('User registered with success!', 'success');
             } catch (e) {
                 this.displayMessage(e, 'danger');
@@ -40,6 +44,9 @@ export default class UserView {
     bindLoginForm() {
         this.loginButton.addEventListener('click', () => {
             try {
+                if (this.loginUsername.value == '' || this.loginPassword.value == '') {
+                    throw Error ('Preencha todos os campos!');
+                }
                 this.userController.login(this.loginUsername.value, this.loginPassword.value);
                 this.displayMessage('User logged in with success!', 'success');
 
