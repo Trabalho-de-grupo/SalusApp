@@ -183,10 +183,10 @@ header{
 }
 
 .lista{
-    width: 320px;
+    width: 300px;
     height: 200px;
-    margin-top: 20px;
-    margin-left: 100px;
+    margin-top: 40px;
+    margin-left: 80px;
     background:#EEEEEE;
     padding:5px;
     border-radius: 5px 5px 5px 5px;
