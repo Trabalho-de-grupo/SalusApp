@@ -176,3 +176,19 @@ header{
     color:white;
 }
 
+.tituloAtividades{
+    color:#706F6F;
+    margin-top: 50px;
+    margin-left:120px;
+}
+
+.lista{
+    width: 320px;
+    height: 200px;
+    margin-top: 20px;
+    margin-left: 100px;
+    background:#EEEEEE;
+    padding:5px;
+    border-radius: 5px 5px 5px 5px;
+}
+
