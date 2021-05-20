@@ -7,17 +7,27 @@ export default class UserController {
     }
 
     register(username, email, password) {
-        if (this.users.find(user => user.username === username)) {
+        if (this.users.find(user => user.username === username)) 
+        {
             throw Error(`User with username "${username}" already exists!`);
-        } else {
-            const newId = this.users.length > 0 ? this.users[this.users.length - 1].id + 1 : 1
-            this.users.push(new UserModel(newId, username, email, password));
-            localStorage.setItem('users', JSON.stringify(this.users));
+        } 
+        else 
+        {
+            if (this.users.find(user => user.email === email))
+            {
+                throw Error(`User with email "${email}" already exists!`);
+            }
+            else
+            {
+                const newId = this.users.length > 0 ? this.users[this.users.length - 1].id + 1 : 1
+                this.users.push(new UserModel(newId, username, email, password));
+                localStorage.setItem('users', JSON.stringify(this.users));
+            }
         }
     }
 
     login(username, password) {
-        if (this.users.some(user => user.username === username && user.password === password)) {
+        if (this.users.some(user => user.email === username && user.password === password)) {
             sessionStorage.setItem('loggedUser', username);
             return true;
         } else {
