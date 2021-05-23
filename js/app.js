@@ -29,6 +29,7 @@ class App {
                 password: 'pass2'
             }
         ];
+         
 
         // Load the fixtures in case there is no data in the local storage 
         if (!localStorage.users) {
