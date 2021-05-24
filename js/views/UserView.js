@@ -19,10 +19,6 @@ export default class UserView {
         this.logoutButton = document.getElementById('btnLogout');
         this.bindLoginForm();
 
-        var x = document.getElementById("login");
-        var y = document.getElementById("registar");
-        var z = document.getElementById("btn");
-
         this.messages = document.querySelector('#messages')
         this.checkLoginStatus();
     }

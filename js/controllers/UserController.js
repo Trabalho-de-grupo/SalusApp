@@ -43,16 +43,4 @@ export default class UserController {
         return sessionStorage.getItem('loggedUser') !== null ? true : false;
     }
 
-    btnRegistar() {
-        x.style.left = "-400px";
-        y.style.left = "50px";
-        z.style.left = "104px";
-    }
-
-    btnLogin() {
-        x.style.left = "50px";
-        y.style.left = "450px";
-        z.style.left = "0";
-    }
-    
 }
