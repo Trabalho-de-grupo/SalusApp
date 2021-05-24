@@ -20,13 +20,15 @@ class App {
                 id: 1,
                 username: 'user1',
                 email: 'email1',
-                password: 'pass1'
+                password: 'pass1',
+                status: 'admin'
             },
             {
                 id: 2,
                 username: 'user2',
                 email: 'email2',
-                password: 'pass2'
+                password: 'pass2',
+                status: 'user'
             }
         ];
          
