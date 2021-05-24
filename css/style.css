@@ -182,13 +182,33 @@ header{
     margin-left:120px;
 }
 
-.lista{
+.atividade1{
     width: 300px;
     height: 200px;
-    margin-top: 40px;
-    margin-left: 80px;
-    background:#EEEEEE;
-    padding:5px;
+    margin:50px;
+    background:#F6B8C3;
     border-radius: 5px 5px 5px 5px;
+}
+
+.atividade2{
+    width: 300px;
+    height: 200px;
+    margin:50px;
+    background:#B8B8B8;
+    border-radius: 5px 5px 5px 5px;
+}
+
+.atividade3{
+    width: 300px;
+    height: 200px;
+    margin:50px;
+    background:#E0B0FF;
+    border-radius: 5px 5px 5px 5px;
+}
+
+.tableAtividade{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
