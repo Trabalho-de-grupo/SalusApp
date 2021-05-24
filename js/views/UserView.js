@@ -50,6 +50,9 @@ export default class UserView {
                 this.userController.login(this.loginUsername.value, this.loginPassword.value);
                 this.displayMessage('User logged in with success!', 'success');
 
+                //Link que envia depois do Loggin
+                window.location.replace('/html/categoria.html')
+
                 // Wait 1 second before reloading, so the user can see the login success message
                 setTimeout(() => {
                     this.updateButtons('login');
