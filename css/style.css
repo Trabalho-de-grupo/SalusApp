@@ -14,15 +14,6 @@
     font-family: montserrat-regular;
 }
 
-header {
-    height: 50px;
-    width: 100%;
-    background-image: linear-gradient(#CBC0DC, #F6B8C3);
-    background-position: center;
-    background-size: cover;
-    position: relative;
-    margin: 0;
-}
 
 .color-text {
     color: #8164A2;
@@ -250,4 +241,25 @@ header {
     background-position: center;
     background-size: cover;
     position: absolute;
+}
+
+header {
+    background-image: linear-gradient(#CBC0DC, #F6B8C3);
+    padding:0;
+    margin: 0;
+    overflow-x: hidden;
+    text-align: center;
+}
+header li{
+    display: inline-block;
+}
+
+.botaoMenu{
+    float: left;
+    margin-left:50px;
+}
+
+.botaoConta{
+    float:right;
+    margin-right: 100px;
 }
