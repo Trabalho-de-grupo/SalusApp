@@ -1,9 +1,11 @@
 export default class InfoModel {
-    constructor(id, username, email, password, activities) {
+    constructor(id, latitude, longitude, name, email, number, link) {
         this.id = id
-        this.username = username
+        this.latitude = latitude
+        this.longitude = longitude
+        this.name = name
         this.email = email
-        this.password = password
-        this.activities = activities
+        this.number = number
+        this.link = link
     }
 }
