@@ -126,7 +126,7 @@
     align-items: center;
     justify-content: center;
     color: white;
-    font-size: 20px;
+    font-size: 30px;
     margin: 0;
 }
 
@@ -245,9 +245,8 @@
 
 header {
     background-image: linear-gradient(#CBC0DC, #F6B8C3);
-    padding:0;
+    padding:8px;
     margin: 0;
-    overflow-x: hidden;
     text-align: center;
 }
 header li{
@@ -255,11 +254,21 @@ header li{
 }
 
 .botaoMenu{
-    float: left;
-    margin-left:50px;
+    border: none;
+    background-color: transparent;
 }
 
+.botaoEsquerda{
+    float: left;
+    margin-left:50px;
+    margin-top: 5px;
+}
 .botaoConta{
+    border: none;
+    background-color: transparent;
+}
+.botaoDireita{
     float:right;
     margin-right: 100px;
+    margin-top: 5px;
 }
