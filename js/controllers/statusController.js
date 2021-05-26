@@ -18,3 +18,7 @@ function menuOn() {
 function menuOff() {
     document.getElementById("menuOverlay").style.display = "none";
 }
+
+function perfilOn(){
+    window.location.replace('/html/perfil.html')
+}
