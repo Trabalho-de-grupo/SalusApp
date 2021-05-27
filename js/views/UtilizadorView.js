@@ -1,7 +1,7 @@
 import UtilizadorController from '../controllers/UtilizadorController.js'
 
 
-export default class UtilizadorView {
+class UtilizadorView {
     constructor() {
             this.utilizadorController = new UtilizadorController()
 
@@ -12,22 +12,26 @@ export default class UtilizadorView {
 
             this.bindEditUtilizador();
             this.bindDeleteUtilizador();
+            this.updateTableUtilizador();
     }
 
     bindEditUtilizador() {
         this.btnEditUtilizador.addEventListener('click', () => {
-            
+            console.log("edit")
         })
 
 
     }
 
     bindDeleteUtilizador() {
-        
+        this.btnDeleteUtilizador.addEventListener('click', () => {
+            console.log("delete")
+        })
     }
 
-
-
+    updateTableUtilizador() {
+        this.utilizadorController.UpdateTable();
+    }
 
 
 
@@ -36,3 +40,5 @@ export default class UtilizadorView {
             `<div class="alert alert-${type}" role="alert">${message}</div>`;
     }
 }
+
+new UtilizadorView();
