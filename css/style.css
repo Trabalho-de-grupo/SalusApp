@@ -19,6 +19,8 @@
 .color-text {
     color: #8164A2;
     position: relative;
+    margin-top: 50px;
+    margin-left: 70px;
 }
 
 .fundo {
@@ -151,12 +153,15 @@
     padding: 10px 30px;
     cursor: pointer;
     margin: auto;
+    margin-top: 30px;
+    margin-left: 70px;
     background: #F6B8C3;
     border: 0;
     outline: none;
     text-decoration: underline;
     text-decoration-color: #F6B8C3;
     color: white;
+    font-size: 28px;
     border-radius: 15px;
     position: relative;
 }
@@ -304,4 +309,15 @@ header li{
 
 .footer-col li{
     color: white;
+}
+
+.slogan{
+    font-size: 60px;
+}
+
+.descricao{
+    font-size: 20px;
+}
+.rosa{
+    color:#E72168;
 }
