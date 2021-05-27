@@ -1,4 +1,6 @@
 import UserView from './views/UserView.js'
+import CategoriaView from './views/CategoriaView.js'
+
 
 class App {
     constructor() {
@@ -12,6 +14,13 @@ class App {
 
         // instantiate the views mapped in the routes object
         this.#instantiateViews();
+    }
+
+    constructor() {
+        this.routes = {
+            '': [CategoriaView],
+            'admin': [CategoriaView]
+        };
     }
 
     #importDataFixtures() {

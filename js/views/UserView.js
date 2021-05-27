@@ -31,7 +31,7 @@ export default class UserView {
                     throw Error('Password and Confirm Password are not equal');
                 }
                 if (this.registerUsername.value == '' || this.registerEmail.value == '' || this.registerPassword.value == '') {
-                    throw Error ('Preencha todos os campos!');
+                    throw Error('Preencha todos os campos!');
                 }
                 this.userController.register(this.registerUsername.value, this.registerEmail.value, this.registerPassword.value);
                 this.displayMessage('User registered with success!', 'success');
@@ -45,7 +45,7 @@ export default class UserView {
         this.loginButton.addEventListener('click', () => {
             try {
                 if (this.loginUsername.value == '' || this.loginPassword.value == '') {
-                    throw Error ('Preencha todos os campos!');
+                    throw Error('Preencha todos os campos!');
                 }
                 this.userController.login(this.loginUsername.value, this.loginPassword.value);
                 this.displayMessage('User logged in with success!', 'success');
@@ -55,9 +55,9 @@ export default class UserView {
 
                 // Wait 1 second before reloading, so the user can see the login success message
                 setTimeout(() => {
-                    this.updateButtons('login');
-                    location.reload()
-                },
+                        this.updateButtons('login');
+                        location.reload()
+                    },
                     1000);
 
             } catch (e) {

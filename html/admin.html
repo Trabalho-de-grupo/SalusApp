@@ -15,15 +15,20 @@
 
 <header>
     <ul>
-    <li class="botaoEsquerda"><button class="botaoMenu" onclick="menuOn()"><img src="../img/menu.png" width="30px" height="30px"></button></li>
-    <li><h1 class="cabeçalho">SalusApp</h1></li>
-    <li class="botaoDireita"><button class="botaoConta" onclick="perfilOn()"><img src="../img/user.png" width="30px" height="30px"></button><button class="botaoConta"  style="visibility:hidden;"><img src="../img/configuracao.png" width="35px" height="35px"></button></li>
+        <li class="botaoEsquerda"><button class="botaoMenu" onclick="menuOn()"><img src="../img/menu.png" width="30px"
+                    height="30px"></button></li>
+        <li>
+            <h1 class="cabeçalho">SalusApp</h1>
+        </li>
+        <li class="botaoDireita"><button class="botaoConta" onclick="perfilOn()"><img src="../img/user.png" width="30px"
+                    height="30px"></button><button class="botaoConta" style="visibility:hidden;"><img
+                    src="../img/configuracao.png" width="35px" height="35px"></button></li>
     </ul>
 </header>
 
 <body>
     <div id="menuOverlay" class="back" onclick="menuOff()">
-        
+
         <h1 class="menu">MENU</h1>
 
         <br><br><br>
@@ -33,13 +38,105 @@
         <h2 class="menu"><a class="submenu" href="estatistica.html">Estatistica</a></h2>
 
     </div>
-    
+
+    <br><br>
+
+    <h2 style="text-align: center;">Utilizadores</h2>
+
+    <br><br>
+
+    <table class="table" style="text-align: center;">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>username</th>
+                <th>email</th>
+                <th>password</th>
+                <th>status</th>
+                <th>1</th>
+            </tr>
+        </thead>
+        <tbody class="tableUtilizador">
+            <tr>
+                <td scope="row"></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <br><br>
+
+    <h2 style="text-align: center;">Categorias</h2>
+
+    <br><br>
+
+    <table class="table" style="text-align: center;">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>name</th>
+                <th>color</th>
+                <th>icon</th>
+                <th>description</th>
+                <th>1</th>
+            </tr>
+        </thead>
+        <tbody class="tableCategoria">
+            <tr>
+                <td scope="row"></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <br><br>
+
+    <h2 style="text-align: center;">Atividades</h2>
+
+    <br><br>
+
+    <table class="table" style="text-align: center;">
+        <thead>
+            <tr>
+                <td scope="row">id</td>
+                <th>idCategoria</th>
+                <th>name</th>
+                <th>image</th>
+                <th>video</th>
+                <th>description</th>
+                <th>materials</th>
+                <th>steps</th>
+                <th>time</th>
+                <th>1</th>
+            </tr>
+        </thead>
+        <tbody class="tableAtividades">
+            <tr>
+                <td scope="row"></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+
 </body>
 
-<footer>
-    
-</footer>
-
+<script type="module" src="../js/app.js"></script>
 <script src="../js/controllers/StatusController.js"></script>
 
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->

@@ -7,18 +7,12 @@ export default class UserController {
     }
 
     register(username, email, password) {
-        if (this.users.find(user => user.username === username)) 
-        {
+        if (this.users.find(user => user.username === username)) {
             throw Error(`User with username "${username}" already exists!`);
-        } 
-        else 
-        {
-            if (this.users.find(user => user.email === email))
-            {
+        } else {
+            if (this.users.find(user => user.email === email)) {
                 throw Error(`User with email "${email}" already exists!`);
-            }
-            else
-            {
+            } else {
                 const newId = this.users.length > 0 ? this.users[this.users.length - 1].id + 1 : 1
                 this.users.push(new UserModel(newId, username, email, password, 'user'));
                 localStorage.setItem('users', JSON.stringify(this.users));
@@ -28,7 +22,8 @@ export default class UserController {
 
     login(username, password) {
         if (this.users.some(user => user.email === username && user.password === password)) {
-            sessionStorage.setItem('loggedUser', username);
+            let id = this.users.find(user => user.email === username).id
+            sessionStorage.setItem('loggedUser', id);
             return true;
         } else {
             throw Error('Invalid login!');
