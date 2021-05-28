@@ -6,7 +6,7 @@ if (sessionStorage.getItem('loggedUser') == null) {
 
     Object.keys(users).forEach(function (key) {
         if (this.users.find(user => user.status == 'admin')) {
-            console.log(key, users[key]);
+            //console.log(key, users[key]);
         }
     });
 }
