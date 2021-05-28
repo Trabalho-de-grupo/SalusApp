@@ -35,6 +35,17 @@ export default class UserView {
                 }
                 this.userController.register(this.registerUsername.value, this.registerEmail.value, this.registerPassword.value);
                 this.displayMessage('User registered with success!', 'success');
+
+                //Link que envia depois do Loggin
+                window.location.replace('/html/categoria.html')
+
+                // Wait 1 second before reloading, so the user can see the login success message
+                setTimeout(() => {
+                    this.updateButtons('login');
+                    location.reload()
+                },
+                1000);
+
             } catch (e) {
                 this.displayMessage(e, 'danger');
             }
