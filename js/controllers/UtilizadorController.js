@@ -15,27 +15,27 @@ export default class UtilizadorController {
         for (let i = 0; i < length; i++) {
 
             table.innerHTML += `
-                    <tr class="linhaUtilizador">
-                        <td scope="row">${this.users[i].id}</td>
-                        <td>${this.users[i].username}</td>
-                        <td>${this.users[i].email}</td>
-                        <td>${this.users[i].password}</td>
-                        <td>${this.users[i].status}</td>
-                        <td>
-                            <button id="btnEditUtilizador"class="btn btn-outline-secondary">Edit</button>
-                            <button id="btnDeleteUtilizador"class="btn btn-outline-secondary">Delete</button>
-                        </td>
-                    </tr>
+                <tr class="linhaUtilizador">
+                    <td scope="row">${this.users[i].id}</td>
+                    <td>${this.users[i].username}</td>
+                    <td>${this.users[i].email}</td>
+                    <td>${this.users[i].password}</td>
+                    <td>${this.users[i].status}</td>
+                    <td>
+                        <button class="btnEditUtilizador btn btn-outline-secondary">Edit</button>
+                        <button class="btnDeleteUtilizador btn btn-outline-secondary">Delete</button>
+                    </td>
+                </tr>
             `
         }
     }
 
-    BtnEditData() {
-
+    BtnEditData(id) {
+        console.log(id)
     }
 
-    BtnDeleteData() {
-        
+    BtnDeleteData(id) {
+        console.log(id)
     }
 
 

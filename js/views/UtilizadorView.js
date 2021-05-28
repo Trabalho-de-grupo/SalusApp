@@ -9,32 +9,34 @@ class UtilizadorView {
 
         this.updateTableUtilizador();
 
-        this.btnEditUtilizador = document.getElementById("btnEditUtilizador");
-        this.btnDeleteUtilizador = document.getElementById("btnDeleteUtilizador");
+        this.btnEditUtilizador = document.getElementsByClassName("btnEditUtilizador");
+        this.btnDeleteUtilizador = document.getElementsByClassName("btnDeleteUtilizador");
+        this.linesUtilizador = document.querySelector('tbody')
 
         this.bindEditUtilizador();
         this.bindDeleteUtilizador();
 
-        this.lineUtilizador = document.querySelectorAll("#tableUtilizador")
     }
 
     bindEditUtilizador() {
 
-        this.btnEditUtilizador.addEventListener('click', () => {
-            console.log("EDIT")
-            console.log(this.btnEditUtilizador)
-            this.utilizadorController.btnEditUtilizador()
-        });
+        for (const btnEdit of this.btnEditUtilizador) {
+            btnEdit.addEventListener('click', () => {
+                let id = (btnEdit.parentNode.parentNode.cells[0])
+                this.utilizadorController.BtnEditData(id);
+            });
+        }
 
     }
 
     bindDeleteUtilizador() {
 
-        this.btnDeleteUtilizador.addEventListener('click', () => {
-            console.log("DELETE")
-            console.log(this.btnDeleteUtilizador)
-            this.utilizadorController.btnDeleteUtilizador()
-        });
+        for (const btnDelete of this.btnDeleteUtilizador) {
+            btnDelete.addEventListener('click', () => {
+                let id = (btnDelete.parentNode.parentNode.cells[0])
+                this.utilizadorController.BtnDeleteData(id);
+            });
+        }
     }
 
     updateTableUtilizador() {
