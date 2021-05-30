@@ -9,7 +9,7 @@ export default class UtilizadorController {
 
     UpdateTable(table) {
 
-        length = this.users.length;
+        let length = this.users.length;
         console.log(table)
 
         for (let i = 0; i < length; i++) {
@@ -30,12 +30,17 @@ export default class UtilizadorController {
         }
     }
 
-    BtnEditData(id) {
-        console.log(id)
+    BtnEditData(chave) {
+        let idvalue = chave.innerText
+        console.log(idvalue)
+        console.log(this.users[idvalue].username)
+        
+        
     }
 
-    BtnDeleteData(id) {
-        console.log(id)
+    BtnDeleteData(chave) {
+        
+        console.log(chave)
     }
 
 

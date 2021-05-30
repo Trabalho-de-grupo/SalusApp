@@ -83,8 +83,6 @@ export default class UserView {
         });
     }
 
-
-
     checkLoginStatus() {
         if (this.userController.isLogged()) {
             this.updateButtons('login');
@@ -134,9 +132,11 @@ export default class UserView {
     }
 }
 
+/* 
 var myModal = document.getElementById('myModal')
 var myInput = document.getElementById('myInput')
 
 myModal.addEventListener('shown.bs.modal', function () {
-  myInput.focus()
-})
+    myInput.focus()
+}) 
+*/
