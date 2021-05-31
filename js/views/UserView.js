@@ -37,7 +37,7 @@ export default class UserView {
                 this.displayMessage('User registered with success!', 'success');
 
                 //Link que envia depois do Loggin
-                window.location.replace('/html/categoria.html')
+                window.location.replace('/html/registo.html')
 
                 // Wait 1 second before reloading, so the user can see the login success message
                 setTimeout(() => {
@@ -131,12 +131,3 @@ export default class UserView {
         }
     }
 }
-
-/* 
-var myModal = document.getElementById('myModal')
-var myInput = document.getElementById('myInput')
-
-myModal.addEventListener('shown.bs.modal', function () {
-    myInput.focus()
-}) 
-*/

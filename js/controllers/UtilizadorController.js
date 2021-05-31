@@ -32,8 +32,9 @@ export default class UtilizadorController {
 
     BtnEditData(chave) {
         let idvalue = chave.innerText
+        console.log(chave)
         console.log(idvalue)
-        console.log(this.users[idvalue].username)
+        console.log(this.users[idvalue-1].username)
         
         
     }
