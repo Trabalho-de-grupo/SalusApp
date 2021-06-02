@@ -20,30 +20,34 @@
         <li>
             <h1 class="cabeçalho">SalusApp</h1>
         </li>
-        <li class="botaoDireita"><button class="botaoConta botaoPerfil" onclick="perfilOn()"><img src="../img/user.png" width="30px"
-                    height="30px"></button><button class="botaoConta botaoAdmin" style="visibility:hidden;"><img
-                    src="../img/configuracao.png" width="35px" height="35px"></button></li>
+        <li class="botaoDireita"><button class="botaoConta botaoPerfil" onclick="perfilOn()"><img src="../img/user.png"
+                    width="30px" height="30px"></button><button class="botaoConta botaoAdmin"
+                style="visibility:hidden;"><img src="../img/configuracao.png" width="35px" height="35px"></button></li>
     </ul>
 </header>
 
 <body>
 
-    <!-- Modal -->
+    <!-- Modal Delete Line -->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Apagar Registo</h5>
+                    <button type="button" class="close btn btn-outline-secondary" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">X</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <br>
+                    Tem a certeza que pretende apagar o registo ??
+                    <br><br>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-success" data-dismiss="modal" id=btnDeleteLine>Confirmar</button>
+                    <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Fechar</button>
+                </div>
             </div>
-            <div class="modal-body">
-            ...
-            </div>
-            <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
-            </div>
-        </div>
         </div>
     </div>
 
@@ -76,7 +80,7 @@
                 <th>status</th>
                 <th>Option</th>
             </tr>
-        </thead> 
+        </thead>
     </table>
 
     <br><br>

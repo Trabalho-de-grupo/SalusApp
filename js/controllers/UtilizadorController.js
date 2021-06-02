@@ -5,6 +5,7 @@ export default class UtilizadorController {
 
     constructor() {
         this.users = localStorage.users ? JSON.parse(localStorage.users) : []
+        this.idUtilizador
     }
 
     UpdateTable(table) {
@@ -23,7 +24,7 @@ export default class UtilizadorController {
                     <td>${this.users[i].status}</td>
                     <td>
                         <button class="btnEditUtilizador btn btn-outline-secondary">Edit</button>
-                        <button class="btnDeleteUtilizador btn btn-outline-secondary">Delete</button>
+                        <button class="btnDeleteUtilizador btn btn-outline-secondary" data-toggle="modal" data-target="#exampleModal">Delete</button>
                     </td>
                 </tr>
             `
@@ -40,10 +41,17 @@ export default class UtilizadorController {
     }
 
     BtnDeleteData(chave) {
-        
-        console.log(chave)
+
+        Object.values(users).forEach(user => {
+            if (user.id == chave.innerText) {
+                this.idUtilizador = chave.innerText
+            }
+        })
     }
 
-
-
+    BtnDeleteConfirmar() {
+        this.users.splice(this.idUtilizador, 2)
+        console.log(this.idUtilizador)
+        Object.values(users).splice(this.idUtilizador)
+    }
 }
