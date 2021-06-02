@@ -28,13 +28,13 @@ export default class UserView {
 
             try {
                 if (this.registerPassword.value !== this.registerPassword2.value) {
-                    throw Error('Password and Confirm Password are not equal');
+                    throw Error('Password e Confirmar Password não coincidem');
                 }
                 if (this.registerUsername.value == '' || this.registerEmail.value == '' || this.registerPassword.value == '') {
                     throw Error('Preencha todos os campos!');
                 }
                 this.userController.register(this.registerUsername.value, this.registerEmail.value, this.registerPassword.value);
-                this.displayMessage('User registered with success!', 'success');
+                this.displayMessage('Utilizador registado com sucesso!', 'success');
 
                 //Link que envia depois do Loggin
                 window.location.replace('/html/registo.html')
@@ -59,7 +59,7 @@ export default class UserView {
                     throw Error('Preencha todos os campos!');
                 }
                 this.userController.login(this.loginUsername.value, this.loginPassword.value);
-                this.displayMessage('User logged in with success!', 'success');
+                this.displayMessage('Login bem sucedido!', 'success');
 
                 //Link que envia depois do Loggin
                 window.location.replace('/html/categoria.html')
@@ -93,28 +93,7 @@ export default class UserView {
 
     displayMessage(message, type) {
         this.messages.innerHTML =
-            `<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-            Launch static backdrop modal
-          </button>
-          
-          <!-- Modal -->
-          <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                <div class="alert alert-${type}" role="alert">${message}</div>
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                  <button type="button" class="btn btn-primary">Understood</button>
-                </div>
-              </div>
-            </div>
-          </div>
+            `<div class="alert alert-${type}" role="alert">${message}</div>;
             `;
             
     }

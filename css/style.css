@@ -35,7 +35,7 @@
     width: 380px;
     height: 480px;
     position: relative;
-    margin: 6% auto;
+    margin: 2% auto;
     background: #EEEEEE;
     padding: 5px;
     border-radius: 5px 5px 5px 5px;
@@ -69,7 +69,7 @@
     left: 0;
     position: absolute;
     width: 105px;
-    height: 102%;
+    height: 100%;
     background: linear-gradient(to right, #8164A2, #CBC0DC);
     border-radius: 13px;
     transition: .5s;
@@ -179,13 +179,14 @@
 
 .submenu {
     color: #8164A2;
-    text-decoration: underline;
+    text-decoration: none;
     text-decoration-color: white;
     text-underline-offset: 7px;
 }
 
 .submenu:hover {
     color: white;
+    text-decoration: underline;
 }
 
 
@@ -279,6 +280,12 @@ header li{
     margin-top: 5px;
     
 }
+.botaoLogout{
+    border: none;
+    background-color: transparent;
+    margin-bottom: 100px;
+    margin-left:80px;
+}
 
 .footer{
     background-color: #A8A8A7;
@@ -327,5 +334,9 @@ header li{
     align-items: center;
     justify-content: center;
     padding: 30px;
+    margin-top: 20px;
     color: white;
+}
+.alert{
+    text-align: center;
 }
