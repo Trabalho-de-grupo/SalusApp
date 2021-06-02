@@ -8,8 +8,10 @@ if (sessionStorage.getItem('loggedUser') == null) {
     Object.values(users).forEach(user => {
         if (user.id == utilizador && user.status == "admin") {
             console.log("ADMIN")
-        } else {
-            console.log("UTILIZADOR")
+            let botaoAdmin= document.getElementsByClassName("botaoAdmin")
+            console.log(botaoAdmin)
+            document.getElementsByClassName("botaoAdmin").style.visibility = "hidden";
+            document.getElementsByClassName("botaoPerfil").style.visibility= "hidden";
         }
     })
 }
