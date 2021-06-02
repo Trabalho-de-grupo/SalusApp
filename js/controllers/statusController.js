@@ -3,12 +3,15 @@ if (sessionStorage.getItem('loggedUser') == null) {
 } else {
 
     this.users = localStorage.users ? JSON.parse(localStorage.users) : []
+    utilizador = sessionStorage.getItem('loggedUser')
 
-    Object.keys(users).forEach(function (key) {
-        if (this.users.find(user => user.status == 'admin')) {
-            //console.log(key, users[key]);
+    Object.values(users).forEach(user => {
+        if (user.id == utilizador && user.status == "admin") {
+            console.log("ADMIN")
+        } else {
+            console.log("UTILIZADOR")
         }
-    });
+    })
 }
 
 function menuOn() {
@@ -19,6 +22,6 @@ function menuOff() {
     document.getElementById("menuOverlay").style.display = "none";
 }
 
-function perfilOn(){
+function perfilOn() {
     window.location.replace('/html/perfil.html')
 }
