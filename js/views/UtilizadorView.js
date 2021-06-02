@@ -13,8 +13,11 @@ class UtilizadorView {
         this.btnDeleteUtilizador = document.getElementsByClassName("btnDeleteUtilizador");
         this.linesUtilizador = document.querySelector('tbody')
 
+        this.btnDeleLineUtilizador = document.getElementById("btnDeleteLine")
+
         this.bindEditUtilizador();
         this.bindDeleteUtilizador();
+        this.bindDeleteLine();
 
     }
 
@@ -39,6 +42,12 @@ class UtilizadorView {
         }
     }
 
+    bindDeleteLine() {
+        this.btnDeleLineUtilizador.addEventListener('click', () => {
+            this.utilizadorController.BtnDeleteConfirmar();
+        })
+    }
+
     updateTableUtilizador() {
         this.utilizadorController.UpdateTable(this.tableUtilizador);
     }
@@ -47,6 +56,7 @@ class UtilizadorView {
         this.messages.innerHTML =
             `<div class="alert alert-${type}" role="alert">${message}</div>`;
     }
+
 }
 
 new UtilizadorView();
