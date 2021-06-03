@@ -28,3 +28,7 @@ function menuOff() {
 function perfilOn() {
     window.location.replace('/html/perfil.html')
 }
+
+function logout() {
+    sessionStorage.removeItem('loggedUser');
+}
