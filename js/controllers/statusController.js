@@ -6,27 +6,19 @@ if (sessionStorage.getItem('loggedUser') == null) {
     utilizador = sessionStorage.getItem('loggedUser')
 
     Object.values(users).forEach(user => {
-        
         if(user.username == utilizador && user.status == "admin") {
-            console.log(user.status)
-
             btnAdmin = document.querySelectorAll(".botaoConta")
             btnAdmin[0].style.visibility = "hidden";
             btnAdmin[1].style.visibility = "visible";
         }
-        /*
-        if (user.id == utilizador && user.status == "admin") {
-            console.log("ADMIN")
-            let botaoAdmin= document.getElementsByClassName("botaoAdmin")
-            console.log(botaoAdmin)
-            document.getElementsByClassName("botaoAdmin").style.visibility = "hidden";
-            document.getElementsByClassName("botaoPerfil").style.visibility= "hidden";
-        }
-        */
-    })
 
-    
+        if (user.username == utilizador && user.status == " user" && window.location.href.split("/").pop() == "admin.html") {
+            window.location.replace('/html/conta.html')
+        }       
+    })
 }
+
+
 
 function menuOn() {
     document.getElementById("menuOverlay").style.display = "block";
