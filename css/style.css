@@ -340,3 +340,8 @@ header li{
 .alert{
     text-align: center;
 }
+#usernameMenu{
+    margin-left: 20px;
+    margin-top: 20px;
+    font-size: 25px;
+}
