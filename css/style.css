@@ -423,6 +423,22 @@ header li{
 .tituloConquistas{
     color: #706F6F;
     font-size: 30px;
-    margin-left: 120px;
     text-align: center;
+    margin-top: 5%;
+}
+.listaTrofeus{
+    list-style: none;
+    text-align: center;
+    margin-top: 4%;
+}
+
+.trofeu{
+    display: inline-block;
+    padding: 2%;
+}
+.lista2{
+    margin-top: 7%;
+}
+.lista3{
+    margin-top: 12%;
 }
