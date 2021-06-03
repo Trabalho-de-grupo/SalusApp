@@ -19,6 +19,7 @@ if (sessionStorage.getItem('loggedUser') == null) {
 
 function menuOn() {
     document.getElementById("menuOverlay").style.display = "block";
+    document.getElementById("usernameMenu").innerHTML = sessionStorage.getItem('loggedUser');
 }
 
 function menuOff() {

@@ -22,8 +22,8 @@ export default class UserController {
 
     login(username, password) {
         if (this.users.some(user => user.email === username && user.password === password)) {
-            let id = this.users.find(user => user.email === username).id
-            sessionStorage.setItem('loggedUser', id);
+            let nome = this.users.find(user => user.email === username).username
+            sessionStorage.setItem('loggedUser', nome);
             return true;
         } else {
             throw Error('Login Inválido!');
