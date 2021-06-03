@@ -419,3 +419,10 @@ header li{
     margin-left: 68%;
     color: #706F6F;
 }
+
+.tituloConquistas{
+    color: #706F6F;
+    font-size: 30px;
+    margin-left: 120px;
+    text-align: center;
+}
