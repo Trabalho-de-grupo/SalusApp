@@ -34,7 +34,9 @@ class UtilizadorView {
 
     bindEditLine() {
         this.btnEditLineUtilizador.addEventListener('click', () => {
-            this.utilizadorController.BtnEditConfirmar();
+            this.radioUserStatus = document.getElementById("radioUserStatus")
+            console.log(this.radioUserStatus)
+            this.utilizadorController.BtnEditConfirmar(this.radioUserStatus);
         });
     }
 
