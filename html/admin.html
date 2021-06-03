@@ -20,9 +20,17 @@
         <li>
             <h1 class="cabeçalho">SalusApp</h1>
         </li>
-        <li class="botaoDireita"><button class="botaoConta botaoPerfil" onclick="perfilOn()"><img src="../img/user.png"
-                    width="30px" height="30px"></button><button class="botaoConta botaoAdmin"
-                style="visibility:hidden;"><img src="../img/configuracao.png" width="35px" height="35px"></button></li>
+
+        <li class="botaoDireita">
+            <button class="botaoConta" onclick="perfilOn()">
+                <img src="../img/user.png" width="30px" height="30px">
+            </button>
+            <button class="botaoConta" style="visibility:hidden;">
+                <a href="admin.html">
+                    <img src="../img/configuracao.png" width="35px" height="35px">
+                </a>
+            </button>
+        </li>
     </ul>
 </header>
 
@@ -44,13 +52,15 @@
                     Editar Utilizador
                     <br><br>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="radioUserStatus" id="radioUserStatus" value="admin">
+                        <input class="form-check-input" type="radio" name="radioUserStatus" id="radioUserStatus"
+                            value="admin">
                         <label class="form-check-label" for="radioUserStatus">
                             Admin Status
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="radioUserStatus" id="radioUserStatus" value="admin" checked>
+                        <input class="form-check-input" type="radio" name="radioUserStatus" id="radioUserStatus"
+                            value="admin" checked>
                         <label class="form-check-label" for="radioUserStatus">
                             User Status
                         </label>
