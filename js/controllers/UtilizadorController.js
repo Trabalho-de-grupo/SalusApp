@@ -41,8 +41,7 @@ export default class UtilizadorController {
     }
 
     BtnDeleteData(chave) {
-
-        Object.values(users).forEach(user => {
+        Object.values(this.users).forEach(user => {
             if (user.id == chave.innerText) {
                 this.idUtilizador = chave.innerText
             }
@@ -50,8 +49,11 @@ export default class UtilizadorController {
     }
 
     BtnDeleteConfirmar() {
-        this.users.splice(this.idUtilizador, 2)
-        console.log(this.idUtilizador)
-        Object.values(users).splice(this.idUtilizador)
+
+        Object.values(this.users).forEach(user => {
+            if (user.id == this.idUtilizador) {
+                window.localStorage.removeItem('users')
+            }
+        })
     }
 }
