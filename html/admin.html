@@ -28,8 +28,31 @@
 
 <body>
 
-    <!-- Modal Delete Line -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+     <!-- Modal Edit User -->
+     <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Editar Registo</h5>
+                    <button type="button" class="close btn btn-outline-secondary" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">X</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <br>
+                    Editar Utilizador
+                    <br><br>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-success" data-dismiss="modal" id=btnEditLine>Confirmar</button>
+                    <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Delete User -->
+    <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
@@ -50,7 +73,6 @@
             </div>
         </div>
     </div>
-
 
     <div id="menuOverlay" class="back" onclick="menuOff()">
 
