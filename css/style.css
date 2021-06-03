@@ -193,6 +193,7 @@
 
 .tituloAtividades {
     color: #706F6F;
+    font-size: 30px;
     margin-top: 50px;
     margin-left: 120px;
 }
@@ -344,4 +345,62 @@ header li{
     margin-left: 20px;
     margin-top: 20px;
     font-size: 25px;
+}
+
+.back2 {
+    height: 100%;
+    width: 100%;
+    background-image: #EEEEEE;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+}
+
+.input-perfil {
+    width: 30%;
+    padding: 10px 0;
+    margin: 5px 0;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 1px solid #707070;
+    outline: none;
+    background: transparent;
+    margin-left: 120px;
+    font-size: 18px;
+}
+
+.guardar {
+    padding: 10px 30px;
+    cursor: pointer;
+    background: #F6B8C3;
+    border: 0;
+    outline: none;
+    text-decoration: underline;
+    text-decoration-color: #F6B8C3;
+    color: white;
+    font-size: 25px;
+    border-radius: 15px;
+    float: right;
+    margin-right: 150px;
+}
+.form-perfil{
+    margin-top:60px;
+    margin-bottom: 60px;
+}
+.level {
+    width: 100%;
+    background-color: #ddd;
+}
+
+.skills {
+    text-align: right; 
+    padding-top: 10px;
+    padding-bottom: 10px; 
+    color: white; 
+}
+.levelup{
+    width: 40%;
+    background-color: #04AA6D;
+
 }
