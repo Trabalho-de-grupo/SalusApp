@@ -11,7 +11,6 @@ export default class UtilizadorController {
     UpdateTable(table) {
 
         let length = this.users.length;
-        console.log(table)
 
         for (let i = 0; i < length; i++) {
 
