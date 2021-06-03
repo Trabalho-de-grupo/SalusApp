@@ -8,10 +8,10 @@ export default class UserController {
 
     register(username, email, password) {
         if (this.users.find(user => user.username === username)) {
-            throw Error(`User with username "${username}" already exists!`);
+            throw Error(`Nome de utilizador "${username}" já existe!`);
         } else {
             if (this.users.find(user => user.email === email)) {
-                throw Error(`User with email "${email}" already exists!`);
+                throw Error(`Este email "${email}" já existe!`);
             } else {
                 const newId = this.users.length > 0 ? this.users[this.users.length - 1].id + 1 : 1
                 this.users.push(new UserModel(newId, username, email, password, 'user'));
@@ -26,7 +26,7 @@ export default class UserController {
             sessionStorage.setItem('loggedUser', id);
             return true;
         } else {
-            throw Error('Invalid login!');
+            throw Error('Login Inválido!');
         }
     }
 
