@@ -39,8 +39,8 @@ export default class UtilizadorController {
         })
     }
 
-    BtnEditConfirmar() {
-        console.log("gato")
+    BtnEditConfirmar(status) {
+        console.log(status.value)
     }
 
     BtnDeleteData(chave) {

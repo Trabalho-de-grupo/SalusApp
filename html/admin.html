@@ -28,13 +28,14 @@
 
 <body>
 
-     <!-- Modal Edit User -->
-     <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <!-- Modal Edit User -->
+    <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel">Editar Registo</h5>
-                    <button type="button" class="close btn btn-outline-secondary" data-dismiss="modal" aria-label="Close">
+                    <button type="button" class="close btn btn-outline-secondary" data-dismiss="modal"
+                        aria-label="Close">
                         <span aria-hidden="true">X</span>
                     </button>
                 </div>
@@ -42,9 +43,23 @@
                     <br>
                     Editar Utilizador
                     <br><br>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="radioUserStatus" id="radioUserStatus" value="admin">
+                        <label class="form-check-label" for="radioUserStatus">
+                            Admin Status
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="radioUserStatus" id="radioUserStatus" value="admin" checked>
+                        <label class="form-check-label" for="radioUserStatus">
+                            User Status
+                        </label>
+                    </div>
+                    <br><br>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-outline-success" data-dismiss="modal" id=btnEditLine>Confirmar</button>
+                    <button type="button" class="btn btn-outline-success" data-dismiss="modal"
+                        id=btnEditLine>Confirmar</button>
                     <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Fechar</button>
                 </div>
             </div>
@@ -57,7 +72,8 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel">Apagar Registo</h5>
-                    <button type="button" class="close btn btn-outline-secondary" data-dismiss="modal" aria-label="Close">
+                    <button type="button" class="close btn btn-outline-secondary" data-dismiss="modal"
+                        aria-label="Close">
                         <span aria-hidden="true">X</span>
                     </button>
                 </div>
@@ -67,7 +83,8 @@
                     <br><br>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-outline-success" data-dismiss="modal" id=btnDeleteLine>Confirmar</button>
+                    <button type="button" class="btn btn-outline-success" data-dismiss="modal"
+                        id=btnDeleteLine>Confirmar</button>
                     <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Fechar</button>
                 </div>
             </div>
@@ -83,7 +100,8 @@
         <h2 class="menu"><a class="submenu" href="categoria.html">Atividades</a></h2>
         <h2 class="menu"><a class="submenu" href="mapa.html">Encontrar Apoio</a></h2>
         <h2 class="menu"><a class="submenu" href="estatistica.html">Estatistica</a></h2>
-        <button class="menu botaoLogout" onclick="logout()"><a href="registo.html"><img src="../img/exit.png" width="50px" height="50px"></a><span id="usernameMenu">Beatriz</span></button>
+        <button class="menu botaoLogout" onclick="logout()"><a href="registo.html"><img src="../img/exit.png"
+                    width="50px" height="50px"></a><span id="usernameMenu">Beatriz</span></button>
 
     </div>
 
