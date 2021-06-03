@@ -14,26 +14,31 @@ class UtilizadorView {
         this.linesUtilizador = document.querySelector('tbody')
 
         this.btnDeleLineUtilizador = document.getElementById("btnDeleteLine")
+        this.btnEditLineUtilizador = document.getElementById("btnEditLine")
 
         this.bindEditUtilizador();
+        this.bindEditLine();
         this.bindDeleteUtilizador();
         this.bindDeleteLine();
 
     }
 
     bindEditUtilizador() {
-
         for (const btnEdit of this.btnEditUtilizador) {
             btnEdit.addEventListener('click', () => {
                 let id = (btnEdit.parentNode.parentNode.cells[0])
                 this.utilizadorController.BtnEditData(id);
             });
         }
+    }
 
+    bindEditLine() {
+        this.btnEditLineUtilizador.addEventListener('click', () => {
+            this.utilizadorController.BtnEditConfirmar();
+        });
     }
 
     bindDeleteUtilizador() {
-
         for (const btnDelete of this.btnDeleteUtilizador) {
             btnDelete.addEventListener('click', () => {
                 let id = (btnDelete.parentNode.parentNode.cells[0])
@@ -45,7 +50,7 @@ class UtilizadorView {
     bindDeleteLine() {
         this.btnDeleLineUtilizador.addEventListener('click', () => {
             this.utilizadorController.BtnDeleteConfirmar();
-        })
+        });
     }
 
     updateTableUtilizador() {

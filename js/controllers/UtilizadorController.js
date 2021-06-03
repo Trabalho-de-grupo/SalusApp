@@ -23,8 +23,8 @@ export default class UtilizadorController {
                     <td>${this.users[i].password}</td>
                     <td>${this.users[i].status}</td>
                     <td>
-                        <button class="btnEditUtilizador btn btn-outline-secondary">Edit</button>
-                        <button class="btnDeleteUtilizador btn btn-outline-secondary" data-toggle="modal" data-target="#exampleModal">Delete</button>
+                        <button class="btnEditUtilizador btn btn-outline-secondary" data-toggle="modal" data-target="#editModal">Edit</button>
+                        <button class="btnDeleteUtilizador btn btn-outline-secondary" data-toggle="modal" data-target="#deleteModal">Delete</button>
                     </td>
                 </tr>
             `
@@ -32,12 +32,15 @@ export default class UtilizadorController {
     }
 
     BtnEditData(chave) {
-        let idvalue = chave.innerText
-        console.log(chave)
-        console.log(idvalue)
-        console.log(this.users[idvalue-1].username)
-        
-        
+        Object.values(this.users).forEach(user => {
+            if (user.id == chave.innerText) {
+                this.idUtilizador = chave.innerText
+            }
+        })
+    }
+
+    BtnEditConfirmar() {
+        console.log("gato")
     }
 
     BtnDeleteData(chave) {
@@ -49,10 +52,12 @@ export default class UtilizadorController {
     }
 
     BtnDeleteConfirmar() {
-
         Object.values(this.users).forEach(user => {
             if (user.id == this.idUtilizador) {
-                window.localStorage.removeItem('users')
+                //Remove toda a tabela user
+                //Falta remover apenas a linha do utilizador com a o id = idUtilizador
+                console.log(user.username)
+                window.localStorage.removeItem('')
             }
         })
     }
