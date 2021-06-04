@@ -18,6 +18,7 @@ export default class UtilizadorController {
                     <td>${user.username}</td>
                     <td>${user.email}</td>
                     <td>${user.password}</td>
+                    <td>${user.idActivities}</td>
                     <td>${user.status}</td>
                     <td>
                         <button class="btnEditUtilizador btn btn-outline-secondary" data-toggle="modal" data-target="#editModal">Edit</button>
