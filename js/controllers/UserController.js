@@ -14,7 +14,7 @@ export default class UserController {
                 throw Error(`Este email "${email}" já existe!`);
             } else {
                 const newId = this.users.length > 0 ? this.users[this.users.length - 1].id + 1 : 1
-                this.users.push(new UserModel(newId, username, email, password, 'user'));
+                this.users.push(new UserModel(newId, username, email, password, 'null', 'user'));
                 localStorage.setItem('users', JSON.stringify(this.users));
             }
         }

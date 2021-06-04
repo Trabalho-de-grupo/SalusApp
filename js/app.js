@@ -22,6 +22,7 @@ class App {
                 username: 'user1',
                 email: 'email1',
                 password: 'pass1',
+                idActivities: 'null',
                 status: 'admin'
             },
             {
@@ -29,6 +30,7 @@ class App {
                 username: 'user2',
                 email: 'email2',
                 password: 'pass2',
+                idActivities: 'null',
                 status: 'user'
             }
         ];
