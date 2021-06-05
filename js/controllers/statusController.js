@@ -15,7 +15,6 @@ if (sessionStorage.getItem('loggedUser') == null) {
             status = user.status
         }
     })
-
     if (window.location.href.split("/").pop() == "admin.html" && status != "admin") {
         window.location.replace('../html/perfil.html')
     }

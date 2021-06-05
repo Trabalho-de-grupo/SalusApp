@@ -67,13 +67,8 @@ export default class UtilizadorController {
 
     //Botão que confirma o Delete do Utilizador
     BtnDeleteConfirmar() {
-        Object.values(this.users).forEach(user => {
-            if (user.id == this.idUtilizador) {
-                //Remove toda a tabela user
-                //Falta remover apenas a linha do utilizador com a o id = idUtilizador
-                console.log(user.username)
-                window.localStorage.removeItem('')
-            }
-        })
+        this.users = users.filter(user => user.id != this.idUtilizador)
+        localStorage.setItem('users', JSON.stringify(this.users));
+        location.reload();
     }
 }
