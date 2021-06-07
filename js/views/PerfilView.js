@@ -13,11 +13,25 @@ class PerfilView {
 
         this.bindGuardarPerfil();
         this.updatePerfilInfo();
+
+        this.messages = document.querySelector('#messages')
     }
     
     bindGuardarPerfil() {
         this.btnGuardarPerfil.addEventListener('click', () => {
-            console.log("oi")
+            try {
+                if (this.inputPassword.value != this.inputConfPassword.value) {
+                    throw Error('Password e Confirmar Password não coincidem!');
+                }
+                if (this.inputPassword.value == '' || this.inputConfPassword.value == '') {
+                    throw Error('Password nao podem ficar em branco!');
+                }
+                this.perfilController.guardarInputPerfil(this.inputName, this.inputEmail, this.inputPassword);
+                this.displayMessage('Alterações Guardadas com sucesso!', 'success');
+
+            } catch (e) {
+                this.displayMessage(e, 'danger');
+            }
         });
     }
 
@@ -25,6 +39,12 @@ class PerfilView {
         this.perfilController.updatePefilInput(inputName, inputEmail);
     }
     
+    displayMessage(message, type) {
+        this.messages.innerHTML =
+            `<div class="alert alert-${type}" role="alert">${message}</div>;
+            `;
+            
+    }
 }
 
 new PerfilView()
