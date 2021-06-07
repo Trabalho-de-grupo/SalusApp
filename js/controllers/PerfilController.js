@@ -24,14 +24,21 @@ export default class PerfilController {
 
         Object.values(this.users).forEach(user => {
             if (user.username == this.sessionName) {
-                
+
+                if (this.users2.find(user2 => user2.username == inputName.value)) {
+                    console.log(inputName.value)
+                }
+                else {
+                    user.username = inputName.value
+                    user.email = inputEmail.value
+                    user.password = inputPass.valueç
+                }
             }
         })
 
-        console.log(inputName)
-        console.log(inputEmail)
-        console.log(inputPass)
 
+
+        console.log(this.users)
 
         /*
         if (this.users2.find(user => user.username === inputName.value)) {
