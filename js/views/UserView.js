@@ -28,7 +28,7 @@ export default class UserView {
 
             try {
                 if (this.registerPassword.value !== this.registerPassword2.value) {
-                    throw Error('Password e Confirmar Password não coincidem');
+                    throw Error('Password e Confirmar Password não coincidem!');
                 }
                 if (this.registerUsername.value == '' || this.registerEmail.value == '' || this.registerPassword.value == '') {
                     throw Error('Preencha todos os campos!');

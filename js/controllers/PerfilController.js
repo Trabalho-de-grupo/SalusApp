@@ -6,16 +6,46 @@ export default class PerfilController {
         this.sessionName = sessionStorage.getItem('loggedUser')
     }
 
-    updatePefilInput(inputName, inputEmail) {
-        console.log(this.sessionName)
-        
+    updatePefilInput(inputName, inputEmail) {        
         Object.values(this.users).forEach(user => {
             if (user.username == this.sessionName) {
                 inputName.setAttribute('value', user.username);
                 inputEmail.setAttribute('value', user.email);
             }
         })
+    }
+
+    guardarInputPerfil(inputName, inputEmail, inputPass) {
+
+        this.users2 = this.users.filter(user2 => user2.username != this.sessionName)
+
+        console.log(this.users)
+        console.log(this.users2)
+
+        Object.values(this.users).forEach(user => {
+            if (user.username == this.sessionName) {
+                
+            }
+        })
+
+        console.log(inputName)
+        console.log(inputEmail)
+        console.log(inputPass)
 
 
+        /*
+        if (this.users2.find(user => user.username === inputName.value)) {
+                    throw Error(`Nome de utilizador "${inputName.value}" já existe!`);
+                } 
+                else {
+                    if (this.users2.find(user => user.email === inputEmail.value)) {
+                        throw Error(`Este email "${inputEmail.value}" já existe!`);
+                    }
+                    else {
+                        console.log(user)   
+                    }
+                }
+        
+        */
     }
 }
