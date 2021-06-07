@@ -6,7 +6,7 @@ export default class UtilizadorController {
     constructor() {
         this.users = localStorage.users ? JSON.parse(localStorage.users) : []
         this.idUtilizador
-        this.idStatus
+        this.idStatus 
     }
 
     //Contrução da Tabela de Utilizadores

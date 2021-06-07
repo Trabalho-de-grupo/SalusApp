@@ -11,10 +11,10 @@ class UtilizadorView {
 
         this.btnEditUtilizador = document.getElementsByClassName("btnEditUtilizador");
         this.btnDeleteUtilizador = document.getElementsByClassName("btnDeleteUtilizador");
-        this.linesUtilizador = document.querySelector('tbody')
+        this.linesUtilizador = document.querySelector('tbody');
 
-        this.btnDeleLineUtilizador = document.getElementById("btnDeleteLine")
-        this.btnEditLineUtilizador = document.getElementById("btnEditLine")
+        this.btnDeleLineUtilizador = document.getElementById("btnDeleteLine");
+        this.btnEditLineUtilizador = document.getElementById("btnEditLine");
 
         this.bindEditUtilizador();
         this.bindEditLine();

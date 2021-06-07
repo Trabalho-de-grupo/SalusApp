@@ -49,11 +49,11 @@
         <br><br><br>
     <h5 class="tituloAtividades">PERFIL</h5>
     <div class="form-perfil">
-    <input class ="input-perfil" type="text" placeholder="NOME"><br>
-    <input class ="input-perfil" type="email" placeholder="EMAIL" ><br>
-    <input class ="input-perfil" type="password" placeholder="PASSWORD"><br>
-    <input class ="input-perfil" type="password" placeholder="CONFIRMAR PASSWORD"><br>
-    <button class="guardar" type="submit">GUARDAR</button>
+    <input class ="input-perfil" type="text" id="inputName" placeholder="NOME"><br>
+    <input class ="input-perfil" type="email" id="inputEmail" placeholder="EMAIL" ><br>
+    <input class ="input-perfil" type="password" id="inputPassword" placeholder="PASSWORD"><br>
+    <input class ="input-perfil" type="password" id="inputConfPassword" placeholder="CONFIRMAR PASSWORD"><br>
+    <button class="guardar" type="submit" id="btnGuardarPerfil">GUARDAR</button>
     </div>
     <div class="level">
         <div class="skills levelup"></div>
@@ -144,6 +144,7 @@
 
 </footer>
 
+<script type="module" src="../js/views/PerfilView.js"></script>
 <script src="../js/controllers/StatusController.js"></script>
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
