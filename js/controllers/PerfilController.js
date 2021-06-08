@@ -16,43 +16,22 @@ export default class PerfilController {
     }
 
     guardarInputPerfil(inputName, inputEmail, inputPass) {
-
         this.users2 = this.users.filter(user2 => user2.username != this.sessionName)
-
-        console.log(this.users)
-        console.log(this.users2)
 
         Object.values(this.users).forEach(user => {
             if (user.username == this.sessionName) {
-
                 if (this.users2.find(user2 => user2.username == inputName.value)) {
-                    console.log(inputName.value)
+                    throw Error(`Nome de utilizador "${inputName.value}" já existe!`);
                 }
-                else {
-                    user.username = inputName.value
-                    user.email = inputEmail.value
-                    user.password = inputPass.valueç
+                if (this.users2.find(user2 => user2.email == inputEmail.value)) {
+                    throw Error(`Email "${inputEmail.value}" já existe!`);
                 }
+                user.username = inputName.value
+                user.email = inputEmail.value
+                user.password = inputPass.value
             }
         })
 
-
-
-        console.log(this.users)
-
-        /*
-        if (this.users2.find(user => user.username === inputName.value)) {
-                    throw Error(`Nome de utilizador "${inputName.value}" já existe!`);
-                } 
-                else {
-                    if (this.users2.find(user => user.email === inputEmail.value)) {
-                        throw Error(`Este email "${inputEmail.value}" já existe!`);
-                    }
-                    else {
-                        console.log(user)   
-                    }
-                }
-        
-        */
+        localStorage.setItem('users', JSON.stringify(this.users));
     }
 }
