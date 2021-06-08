@@ -101,6 +101,42 @@
         </div>
     </div>
 
+    <!-- Modal Add Categoria -->
+    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Adicionar Categoria</h5>
+                <button type="button" class="close btn btn-outline-secondary" data-dismiss="modal"
+                    aria-label="Close">
+                    <span aria-hidden="true">X</span>
+                </button>
+            </div>
+
+            <div class="modal-body">
+                <input type="text" class="form-control" name="nome" id="nome" aria-describedby="helpId" placeholder="nome">
+                <br>
+                <input type="text" class="form-control" name="nome" id="nome" aria-describedby="helpId" placeholder="nome">
+                <br>
+                <input type="text" class="form-control" name="nome" id="nome" aria-describedby="helpId" placeholder="nome">
+                <br>
+                <input type="text" class="form-control" name="nome" id="nome" aria-describedby="helpId" placeholder="nome">
+                <br>
+                <input type="text" class="form-control" name="nome" id="nome" aria-describedby="helpId" placeholder="nome">  
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-success" data-dismiss="modal"
+                    id=btnDeleteLine>Confirmar</button>
+                <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Fechar</button>
+            </div>
+        </div>
+
+    </div>
+    </div>
+
+
+
     <div id="menuOverlay" class="back" onclick="menuOff()">
 
         <h1 class="menu">MENU</h1>
@@ -137,6 +173,7 @@
     <br><br>
 
     <h2 style="text-align: center;">Categorias</h2>
+    <button type="button" class="btn btn-secondary btn-lg" data-toggle="modal" data-target=".bd-example-modal-lg">Adicionar Categoria</button>
 
     <br><br>
 
