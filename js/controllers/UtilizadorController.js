@@ -21,8 +21,8 @@ export default class UtilizadorController {
                     <td>${user.idActivities}</td>
                     <td>${user.status}</td>
                     <td>
-                        <button class="btnEditUtilizador btn btn-outline-secondary" data-toggle="modal" data-target="#editModal">Edit</button>
-                        <button class="btnDeleteUtilizador btn btn-outline-secondary" data-toggle="modal" data-target="#deleteModal">Delete</button>
+                        <button class="btnEditUtilizador btn btn-outline-secondary" data-toggle="modal" data-target="#editUtilizadorModal">Edit</button>
+                        <button class="btnDeleteUtilizador btn btn-outline-secondary" data-toggle="modal" data-target="#deleteUtilizadorModal">Delete</button>
                     </td>
                 </tr>
             `
