@@ -477,3 +477,33 @@ header li{
     display: block;
     margin:auto;
 }
+#circleBar{
+    margin-top:200px;
+    text-align: center;
+}
+#circleBar .round{
+    min-height: 255px ;
+    margin-top:30px;
+    position: relative;
+    margin-bottom:20px;
+}
+#circleBar .round strong{
+    position: absolute;
+    top:50%;
+    left:50%;
+    margin-top:-50px;
+    transform: translate(-50%);
+    color:black;
+}
+#circleBar span{
+    display:block;
+    color:blanchedalmond;
+    margin-top:10px;
+}
+#circleBar span i{
+    color:#F6B8C3;
+    margin-right: 7px ;
+}
+section button:hover{
+    background-color: #F6B8C3;
+}
