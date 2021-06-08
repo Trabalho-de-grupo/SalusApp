@@ -29,6 +29,11 @@ class PerfilView {
                 this.perfilController.guardarInputPerfil(this.inputName, this.inputEmail, this.inputPassword);
                 this.displayMessage('Alterações Guardadas com sucesso!', 'success');
 
+                setTimeout(() => {
+                    //location.reload()
+                },
+                1000);
+
             } catch (e) {
                 this.displayMessage(e, 'danger');
             }
