@@ -30,7 +30,7 @@ class PerfilView {
                 this.displayMessage('Alterações Guardadas com sucesso!', 'success');
 
                 setTimeout(() => {
-                    //location.reload()
+                    location.reload()
                 },
                 1000);
 
