@@ -29,9 +29,9 @@ export default class PerfilController {
                 user.username = inputName.value
                 user.email = inputEmail.value
                 user.password = inputPass.value
+                sessionStorage.setItem('loggedUser', inputName.value);
             }
         })
-
         localStorage.setItem('users', JSON.stringify(this.users));
     }
 }
