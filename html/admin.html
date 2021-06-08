@@ -69,7 +69,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-outline-success" data-dismiss="modal"
-                        id=btnEditLine>Confirmar</button>
+                        id=btnEditLineUtilizador>Confirmar</button>
                     <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Fechar</button>
                 </div>
             </div>
@@ -81,35 +81,26 @@
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Editar Registo</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Editar Categoria</h5>
                     <button type="button" class="close btn btn-outline-secondary" data-dismiss="modal"
                         aria-label="Close">
                         <span aria-hidden="true">X</span>
                     </button>
                 </div>
+    
                 <div class="modal-body">
+                    <input type="text" class="form-control" name="nameEditCategoria" id="nameEditCategoria" required aria-describedby="helpId" placeholder="NOME">
                     <br>
-                    Editar Utilizador
+                    <input type="text" class="form-control" name="colorEditCategoria" id="colorEditCategoria" required aria-describedby="helpId" placeholder="COR">
+                    <br>
+                    <input type="file" class="custom-file-input" name="iconEditCategoria" id="iconEditCategoria" required aria-describedby="helpId">
                     <br><br>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="radioUserStatus" id="radioUserStatus"
-                            value="admin">
-                        <label class="form-check-label" for="radioUserStatus">
-                            Admin Status
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="radioUserStatus" id="radioUserStatus"
-                            value="user">
-                        <label class="form-check-label" for="radioUserStatus">
-                            User Status
-                        </label>
-                    </div>
-                    <br><br>
+                    <textarea type="text" class="form-control" name="descriptionEditCategoria" id="descriptionEditCategoria" required aria-describedby="helpId" placeholder="DESCRIÇÃO"></textarea> 
                 </div>
+    
                 <div class="modal-footer">
                     <button type="button" class="btn btn-outline-success" data-dismiss="modal"
-                        id=btnEditLine>Confirmar</button>
+                        id=btnEditLineCategoria>Confirmar</button>
                     <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Fechar</button>
                 </div>
             </div>
@@ -134,7 +125,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-outline-success" data-dismiss="modal"
-                        id=btnDeleteLine>Confirmar</button>
+                        id=btnDeleteLineUtilizador>Confirmar</button>
                     <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Fechar</button>
                 </div>
             </div>
@@ -159,7 +150,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-outline-success" data-dismiss="modal"
-                        id=btnDeleteLine>Confirmar</button>
+                        id=btnDeleteLineCategoria>Confirmar</button>
                     <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Fechar</button>
                 </div>
             </div>
