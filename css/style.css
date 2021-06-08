@@ -473,3 +473,7 @@ header li{
     margin: auto;
     display: block;
 }
+.btn-add-cat{
+    display: block;
+    margin:auto;
+}

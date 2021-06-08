@@ -114,18 +114,18 @@
             </div>
 
             <div class="modal-body">
-                <input type="text" class="form-control" name="nameCategoria" id="nameCategoria" aria-describedby="helpId" placeholder="NOME">
+                <input type="text" class="form-control" name="nameCategoria" id="nameCategoria" required aria-describedby="helpId" placeholder="NOME">
                 <br>
-                <input type="text" class="form-control" name="colorCategoria" id="colorCategoria" aria-describedby="helpId" placeholder="COR">
+                <input type="text" class="form-control" name="colorCategoria" id="colorCategoria" required aria-describedby="helpId" placeholder="COR">
                 <br>
-                <input type="file" class="custom-file-input" name="iconCategoria" id="iconCategoria" aria-describedby="helpId">
+                <input type="file" class="custom-file-input" name="iconCategoria" id="iconCategoria" required aria-describedby="helpId">
                 <br><br>
-                <textarea type="text" class="form-control" name="descriptionCategoria" id="descriptionCategoria" aria-describedby="helpId" placeholder="DESCRIÇÃO"></textarea> 
+                <textarea type="text" class="form-control" name="descriptionCategoria" id="descriptionCategoria" required aria-describedby="helpId" placeholder="DESCRIÇÃO"></textarea> 
             </div>
 
             <div class="modal-footer">
                 <button type="button" class="btn btn-outline-success" data-dismiss="modal"
-                    id=btnDeleteLine>Confirmar</button>
+                    id=btnAdicionarCategoria>Confirmar</button>
                 <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Fechar</button>
             </div>
         </div>
@@ -167,6 +167,8 @@
     <br><br>
     <h2 style="text-align: center;">Categorias</h2>
     <button type="button" class="btn btn-secondary btn-lg btn-add-cat" data-toggle="modal" data-target=".bd-example-modal-lg">Adicionar Categoria</button>
+    <br>
+    <div id="messages"></div>
     <br><br>
 
     <table class="table" style="text-align: center;">
@@ -199,7 +201,7 @@
     <table class="table" style="text-align: center;">
         <thead>
             <tr>
-                <td scope="row">id</td>
+                <th scope="row">id</th>
                 <th>idCategoria</th>
                 <th>name</th>
                 <th>image</th>
@@ -230,6 +232,7 @@
 </body>
 
 <script type="module" src="../js/views/UtilizadorView.js"></script>
+<script type="module" src="../js/views/CategoriaView.js"></script>
 <script src="../js/controllers/statusController.js"></script>
 
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
