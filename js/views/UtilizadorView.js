@@ -5,13 +5,11 @@ class UtilizadorView {
     constructor() {
         this.utilizadorController = new UtilizadorController()
 
-        this.tableUtilizador = document.querySelector('table');
-
+        this.tableUtilizador = document.querySelectorAll('table');
         this.updateTableUtilizador();
 
         this.btnEditUtilizador = document.getElementsByClassName("btnEditUtilizador");
         this.btnDeleteUtilizador = document.getElementsByClassName("btnDeleteUtilizador");
-        this.linesUtilizador = document.querySelector('tbody');
 
         this.btnDeleLineUtilizador = document.getElementById("btnDeleteLine");
         this.btnEditLineUtilizador = document.getElementById("btnEditLine");
@@ -55,7 +53,7 @@ class UtilizadorView {
     }
 
     updateTableUtilizador() {
-        this.utilizadorController.UpdateTable(this.tableUtilizador);
+        this.utilizadorController.updateTable(this.tableUtilizador[0]);
     }
 
     displayMessage(message, type) {

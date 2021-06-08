@@ -10,7 +10,7 @@ export default class UtilizadorController {
     }
 
     //Contrução da Tabela de Utilizadores
-    UpdateTable(table) {
+    updateTable(table) {
         Object.values(this.users).forEach(user => {
             table.innerHTML += `
                 <tr class="linhaUtilizador">
