@@ -464,3 +464,12 @@ header li{
     text-align: right;
     font-size: 30px;
 }
+.atividadeBox{
+    width: 468px;
+    height: 400px;
+    background-color: #D2D2D2;
+    color: #706F6F;
+    box-sizing: border-box;
+    margin: auto;
+    display: block;
+}
