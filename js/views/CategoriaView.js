@@ -15,9 +15,56 @@ export default class CategoriaView {
         this.inputIconCategoria = document.getElementById("iconCategoria");
         this.inputDescCategoria = document.getElementById("descriptionCategoria");
 
+        this.btnEditCategoria = document.getElementsByClassName("btnEditCategoria");
+        this.btnDeleteCategoria = document.getElementsByClassName("btnDeleteCategoria");
+
+        this.btnDeleLineCategoria = document.getElementById("btnDeleteLineCategoria");
+        this.btnEditLineCategoria = document.getElementById("btnEditLineCategoria");
+
         this.messages = document.querySelectorAll('#messages')
 
         this.bindAdicionarCategoria();
+
+        this.bindEditCategoria();
+        this.bindEditLine();
+        this.bindDeleteCategoria();
+        this.bindDeleteLine();
+
+    }
+
+    bindEditCategoria() {
+        for (const btnEdit of this.btnEditCategoria) {
+            btnEdit.addEventListener('click', () => {
+                let id = (btnEdit.parentNode.parentNode.cells[0])
+                //this.CategoriaController.BtnEditData(id);
+                console.log(id)
+            });
+        }
+    }
+
+    bindEditLine() {
+        this.btnEditLineCategoria.addEventListener('click', () => {
+            //this.radioUserStatus = document.getElementsByName("radioUserStatus")
+            //this.CategoriaController.BtnEditConfirmar(this.radioUserStatus);
+            console.log("oi")
+        });
+    }
+
+    bindDeleteCategoria() {
+        for (const btnDelete of this.btnDeleteCategoria) {
+            btnDelete.addEventListener('click', () => {
+                let id = (btnDelete.parentNode.parentNode.cells[0])
+                //this.CategoriaController.BtnDeleteData(id);
+                console.log(id)
+            });
+        }
+    }
+
+    bindDeleteLine() {
+        this.btnDeleLineCategoria.addEventListener('click', () => {
+            //this.CategoriaController.BtnDeleteConfirmar();
+            console.log("ola")
+        });
     }
 
     CreateCategoriaStorage() {
