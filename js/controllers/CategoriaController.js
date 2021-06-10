@@ -41,6 +41,35 @@ export default class CategoriaController {
         })
     }
 
+    BtnEditData(chave, name, color, icon, desc) {
+        Object.values(this.categorias).forEach(categoria => {
+            if(categoria.id == chave.innerHTML) {
+                name.setAttribute('placeholder', categoria.name);
+                color.setAttribute('placeholder', categoria.color);
+                icon.setAttribute('value', categoria.icon);
+                desc.setAttribute('placeholder', categoria.description);
+            }
+        })
+    }
+
+    BtnEditConfirmar() {
+        console.log("Ola Edit")
+    }
+
+    BtnDeleteData(chave) {
+        Object.values(this.categorias).forEach(categoria => {
+            if(categoria.id == chave.innerHTML) {
+                console.log(categoria) 
+
+            }
+        })
+    }
+
+    BtnDeleteConfirmar() {
+        console.log("Ola Delete")
+    }
+
+
 
 
 

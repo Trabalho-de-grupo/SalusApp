@@ -15,6 +15,11 @@ export default class CategoriaView {
         this.inputIconCategoria = document.getElementById("iconCategoria");
         this.inputDescCategoria = document.getElementById("descriptionCategoria");
 
+        this.inputNameEditCategoria = document.getElementById("nameEditCategoria");
+        this.inputColorEditCategoria = document.getElementById("colorEditCategoria");
+        this.inputIconEditCategoria = document.getElementById("iconEditCategoria");
+        this.inputDescEditCategoria = document.getElementById("descriptionEditCategoria");
+
         this.btnEditCategoria = document.getElementsByClassName("btnEditCategoria");
         this.btnDeleteCategoria = document.getElementsByClassName("btnDeleteCategoria");
 
@@ -29,24 +34,20 @@ export default class CategoriaView {
         this.bindEditLine();
         this.bindDeleteCategoria();
         this.bindDeleteLine();
-
     }
 
     bindEditCategoria() {
         for (const btnEdit of this.btnEditCategoria) {
             btnEdit.addEventListener('click', () => {
                 let id = (btnEdit.parentNode.parentNode.cells[0])
-                //this.CategoriaController.BtnEditData(id);
-                console.log(id)
+                this.CategoriaController.BtnEditData(id, this.inputNameEditCategoria, this.inputColorEditCategoria, this.inputIconEditCategoria, this.inputDescEditCategoria)
             });
         }
     }
 
     bindEditLine() {
         this.btnEditLineCategoria.addEventListener('click', () => {
-            //this.radioUserStatus = document.getElementsByName("radioUserStatus")
-            //this.CategoriaController.BtnEditConfirmar(this.radioUserStatus);
-            console.log("oi")
+            this.CategoriaController.BtnEditConfirmar()
         });
     }
 
@@ -54,18 +55,31 @@ export default class CategoriaView {
         for (const btnDelete of this.btnDeleteCategoria) {
             btnDelete.addEventListener('click', () => {
                 let id = (btnDelete.parentNode.parentNode.cells[0])
-                //this.CategoriaController.BtnDeleteData(id);
-                console.log(id)
+                this.CategoriaController.BtnDeleteData(id)
             });
         }
     }
 
     bindDeleteLine() {
         this.btnDeleLineCategoria.addEventListener('click', () => {
-            //this.CategoriaController.BtnDeleteConfirmar();
-            console.log("ola")
+            this.CategoriaController.BtnDeleteConfirmar()
         });
     }
+
+    bindAdicionarCategoria() {
+        this.btnAdicionarCategoria.addEventListener('click', () => {
+            try {
+                if (this.inputNameCategoria.value == '' || this.inputColorCategoria.value == '' || this.inputIconCategoria.value == '' || this.inputDescCategoria.value == '') {
+                    throw Error('Preencha todos os campos!');
+                } else {
+                    this.CategoriaController.newCategoria(this.inputNameCategoria, this.inputColorCategoria, this.inputDescCategoria);
+                }
+            } catch (e) {
+                this.displayMessage(e, 'danger');
+            }
+        });
+    }
+
 
     CreateCategoriaStorage() {
         const categorias = [{
@@ -79,20 +93,6 @@ export default class CategoriaView {
         if (!localStorage.categorias) {
             localStorage.setItem('categorias', JSON.stringify(categorias));
         }
-    }
-
-    bindAdicionarCategoria() {
-        this.btnAdicionarCategoria.addEventListener('click', () => {
-            try {
-                if (this.inputNameCategoria.value == '' || this.inputColorCategoria.value == '' || this.inputIconCategoria.value == '' || this.inputDescCategoria.value == '') {
-                    throw Error('Preencha todos os campos!');
-                } else {
-                    this.CategoriaController.newCategoria(this.inputNameCategoria, this.inputColorCategoria, this.inputIconCategoria, this.inputDescCategoria);
-                }
-            } catch (e) {
-                this.displayMessage(e, 'danger');
-            }
-        });
     }
 
     updateTableCategoria() {
