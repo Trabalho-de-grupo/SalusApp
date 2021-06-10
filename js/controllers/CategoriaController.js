@@ -46,6 +46,7 @@ export default class CategoriaController {
             if(categoria.id == chave.innerHTML) {
                 name.setAttribute('placeholder', categoria.name);
                 color.setAttribute('placeholder', categoria.color);
+                console.log(color)
                 icon.setAttribute('value', categoria.icon);
                 desc.setAttribute('placeholder', categoria.description);
             }
