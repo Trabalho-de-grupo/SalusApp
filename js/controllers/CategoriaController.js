@@ -55,8 +55,40 @@ export default class CategoriaController {
         })
     }
 
-    BtnEditConfirmar() {
-        console.log("Ola Edit")
+    BtnEditConfirmar(name, color, icon, desc) {
+        this.categorias2 = this.categorias.filter(categoria2 => categoria2.id != this.idUtilizador)
+
+        Object.values(this.categorias).forEach(categoria => {
+            if (categoria.id == this.idUtilizador) {
+                if (name.value == "" && color.value == "" && icon.value == "" && desc.value == "") {
+                    throw Error('Preencha pelo menos um campo!');
+                }
+                if (this.categorias2.find(categoria2 => categoria2.name == name.value)) {
+                    throw Error(`Nome de Categoria "${name.value}" já existe!`);
+                }
+                if (this.categorias2.find(categoria2 => categoria2.color == color.value)) {
+                    throw Error(`Cor da Categoria #"${color.value}" já existe!`);
+                } else {
+                    if (name.value !== "") {
+                        categoria.name = name.value
+                    }
+                    if (color.value !== "") {
+                        categoria.color = color.value
+                    }
+                    if (icon.value !== "") {
+                        let iconPath = icon.value
+                        let iconPath2 = iconPath.substring(iconPath.lastIndexOf("\\") + 1)
+                        categoria.icon = iconPath2
+                    }
+                    if (desc.value !== "") {
+                        categoria.description = desc.value
+                    }
+                }
+
+            }
+        })
+        console.log(this.categorias)
+        localStorage.setItem('categorias', JSON.stringify(this.categorias));
     }
 
     BtnDeleteData(chave) {
