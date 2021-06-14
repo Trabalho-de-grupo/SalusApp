@@ -1,6 +1,6 @@
 import PerfilController from '../controllers/PerfilController.js'
 
-class PerfilView {
+export default class PerfilView {
     constructor() {
         this.perfilController = new PerfilController()
 

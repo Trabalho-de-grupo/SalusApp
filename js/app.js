@@ -1,12 +1,18 @@
 import UserView from './views/UserView.js'
-
+//import PerfilView from './views/PerfilView.js'
 
 class App {
     constructor() {
         this.routes = {
             '': [UserView],
             'registo': [UserView]
+        },
+        /*
+        {
+            '': [PerfilView],
+            'perfil': [PerfilView] 
         };
+         */
 
         // import dummy data for testing purposes
         this.#importDataFixtures();
@@ -47,10 +53,6 @@ class App {
         const file = path.substr(path.lastIndexOf('/') + 1);
         const route = file.split('.')[0];
         const views = this.#getViews(route);
-        console.log(path)
-        console.log(file)
-        console.log(route)
-        console.log(views)
         for (const view of views) {
             new view();
         }
@@ -59,7 +61,6 @@ class App {
     #getViews(route) {
         return typeof this.routes[route] === 'undefined' ? [] : this.routes[route];
     }
-
 }
 
 new App();
