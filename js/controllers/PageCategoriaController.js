@@ -17,7 +17,7 @@ export default class PageCategoriaController {
         console.log(this.categorias.length)
         let end = this.categorias.length
 
-        for(let i = 0; i < end; i++) {
+        for(let i = 0; i < end; i=i+3) {
             console.log(i)
         }
 
