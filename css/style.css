@@ -134,6 +134,15 @@
     margin: 0;
     margin-top: 5%;
 }
+.cabeçalho_home{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 30px;
+    margin: 0;
+
+}
 
 .icon {
     margin-top: 8%;
