@@ -3,7 +3,6 @@ import CategoriaModel from '../models/CategoriaModel.js'
 export default class CategoriaController {
 
     constructor() {
-        this.users = localStorage.users ? JSON.parse(localStorage.users) : []
         this.categorias = localStorage.categorias ? JSON.parse(localStorage.categorias) : []
         this.idUtilizador
 
