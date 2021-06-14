@@ -37,7 +37,8 @@
 <body>
 
     <!-- Modal Edit User -->
-    <div class="modal fade" id="editUtilizadorModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="editUtilizadorModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
@@ -77,7 +78,8 @@
     </div>
 
     <!-- Modal Edit Categoria -->
-    <div class="modal fade" id="editCategoriaModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="editCategoriaModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
@@ -87,17 +89,21 @@
                         <span aria-hidden="true">X</span>
                     </button>
                 </div>
-    
+
                 <div class="modal-body">
-                    <input type="text" class="form-control" name="nameEditCategoria" id="nameEditCategoria" aria-describedby="helpId" placeholder="NOME">
+                    <input type="text" class="form-control" name="nameEditCategoria" id="nameEditCategoria"
+                        aria-describedby="helpId" placeholder="NOME">
                     <br>
-                    <input type="text" class="form-control" name="colorEditCategoria" id="colorEditCategoria" aria-describedby="helpId" maxlength="6" placeholder="#HEXADECIMAL">
+                    <input type="text" class="form-control" name="colorEditCategoria" id="colorEditCategoria"
+                        aria-describedby="helpId" maxlength="6" placeholder="#HEXADECIMAL">
                     <br>
-                    <input type="file" class="custom-file-input" name="iconEditCategoria" id="iconEditCategoria" aria-describedby="helpId" accept="image/png, image/jpeg">
+                    <input type="file" class="custom-file-input" name="iconEditCategoria" id="iconEditCategoria"
+                        aria-describedby="helpId" accept="image/png, image/jpeg">
                     <br><br>
-                    <textarea type="text" class="form-control" name="descriptionEditCategoria" id="descriptionEditCategoria" aria-describedby="helpId"  placeholder="DESCRIÇÃO"></textarea> 
+                    <textarea type="text" class="form-control" name="descriptionEditCategoria"
+                        id="descriptionEditCategoria" aria-describedby="helpId" placeholder="DESCRIÇÃO"></textarea>
                 </div>
-    
+
                 <div class="modal-footer">
                     <button type="button" class="btn btn-outline-success" data-dismiss="modal"
                         id=btnEditLineCategoria>Confirmar</button>
@@ -108,7 +114,8 @@
     </div>
 
     <!-- Modal Delete User -->
-    <div class="modal fade" id="deleteUtilizadorModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="deleteUtilizadorModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
@@ -133,7 +140,8 @@
     </div>
 
     <!-- Modal Delete Categoria -->
-    <div class="modal fade" id="deleteCategoriaModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="deleteCategoriaModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
@@ -158,35 +166,40 @@
     </div>
 
     <!-- Modal Add Categoria -->
-    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Adicionar Categoria</h5>
-                <button type="button" class="close btn btn-outline-secondary" data-dismiss="modal"
-                    aria-label="Close">
-                    <span aria-hidden="true">X</span>
-                </button>
+    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Adicionar Categoria</h5>
+                    <button type="button" class="close btn btn-outline-secondary" data-dismiss="modal"
+                        aria-label="Close">
+                        <span aria-hidden="true">X</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+                    <input type="text" class="form-control" name="nameCategoria" id="nameCategoria" required
+                        aria-describedby="helpId" placeholder="NOME">
+                    <br>
+                    <input type="text" class="form-control" name="colorCategoria" id="colorCategoria" required
+                        aria-describedby="helpId" maxlength="6" placeholder="#HEXADECIMAL">
+                    <br>
+                    <input type="file" class="custom-file-input" name="iconCategoria" id="iconCategoria" required
+                        aria-describedby="helpId" accept="image/png, image/jpeg">
+                    <br><br>
+                    <textarea type="text" class="form-control" name="descriptionCategoria" id="descriptionCategoria"
+                        required aria-describedby="helpId" placeholder="DESCRIÇÃO"></textarea>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-success" data-dismiss="modal"
+                        id=btnAdicionarCategoria>Confirmar</button>
+                    <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Fechar</button>
+                </div>
             </div>
 
-            <div class="modal-body">
-                <input type="text" class="form-control" name="nameCategoria" id="nameCategoria" required aria-describedby="helpId" placeholder="NOME">
-                <br>
-                <input type="text" class="form-control" name="colorCategoria" id="colorCategoria" required aria-describedby="helpId" maxlength="6" placeholder="#HEXADECIMAL">
-                <br>
-                <input type="file" class="custom-file-input" name="iconCategoria" id="iconCategoria" required aria-describedby="helpId"  accept="image/png, image/jpeg">
-                <br><br>
-                <textarea type="text" class="form-control" name="descriptionCategoria" id="descriptionCategoria" required aria-describedby="helpId" placeholder="DESCRIÇÃO"></textarea> 
-            </div>
-
-            <div class="modal-footer">
-                <button type="button" class="btn btn-outline-success" data-dismiss="modal"
-                    id=btnAdicionarCategoria>Confirmar</button>
-                <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Fechar</button>
-            </div>
         </div>
-
-    </div>
     </div>
 
     <div id="menuOverlay" class="back" onclick="menuOff()">
@@ -198,7 +211,8 @@
         <h2 class="menu"><a class="submenu" href="categoria.html">Atividades</a></h2>
         <h2 class="menu"><a class="submenu" href="mapa.html">Encontrar Apoio</a></h2>
         <h2 class="menu"><a class="submenu" href="estatistica.html">Estatistica</a></h2>
-        <button class="menu botaoLogout" onclick="logout()"><a href="registo.html"><img src="../img/exit.png" width="50px" height="50px"></a><span id="usernameMenu"></span></button>
+        <button class="menu botaoLogout" onclick="logout()"><a href="registo.html"><img src="../img/exit.png"
+                    width="50px" height="50px"></a><span id="usernameMenu"></span></button>
 
     </div>
 
@@ -222,7 +236,8 @@
 
     <br><br>
     <h2 style="text-align: center;">Categorias</h2>
-    <button type="button" class="btn btn-secondary btn-lg btn-add-cat" data-toggle="modal" data-target=".bd-example-modal-lg">Adicionar Categoria</button>
+    <button type="button" class="btn btn-secondary btn-lg btn-add-cat" data-toggle="modal"
+        data-target=".bd-example-modal-lg">Adicionar Categoria</button>
     <br>
     <div id="messages"></div>
     <br>
