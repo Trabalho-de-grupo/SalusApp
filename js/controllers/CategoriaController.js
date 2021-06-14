@@ -105,16 +105,4 @@ export default class CategoriaController {
         localStorage.setItem('categorias', JSON.stringify(this.categorias));
         location.reload();
     }
-
-
-
-
-
-
-
-
-
-
-
-
 }
