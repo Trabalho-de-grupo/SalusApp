@@ -4,7 +4,6 @@ export default class CategoriaView {
 
     constructor() {
         this.CategoriaController = new CategoriaController();
-        this.CreateCategoriaStorage();
 
         this.tableCategoria = document.querySelectorAll('table');
         this.updateTableCategoria();
@@ -94,42 +93,6 @@ export default class CategoriaView {
         });
     }
 
-    CreateCategoriaStorage() {
-        const categorias = [{
-                id: 1,
-                name: 'Yoga',
-                color: 'F6B8C3',
-                icon: 'exercise.png',
-                description: `É a prática que tem como objetivo controlar o stress, ansiedade, dores no corpo, melhorar o equilíbrio e promover a sensação de bem estar.`,
-            },
-            {
-                id: 2,
-                name: 'Receitas',
-                color: 'B8B8B8',
-                icon: 'cooking.png',
-                description: `Para se inspirar, aprender a cozinhar, experimentar ideias novas e descobrir pratos saborosos, rápidos, fáceis, económicos e saudáveis.`,
-            },
-            {
-                id: 3,
-                name: 'Jardinagem',
-                color: 'E0B0FF',
-                icon: 'exercise.png',
-                description: `A jardinagem traz benefícios para a saúde física e mental. Estudos indicam até que é positiva para a destreza física, mental e autoestima dos mais velhos. Além disso, agrada a pequenos e graúdos e não tem contraindicações. Seja no jardim ou na varanda, experimente.`,
-            },
-            {
-                id: 4,
-                name: 'Artes Plásticas',
-                color: 'C8A2C8',
-                icon: 'artist.png',
-                description: `Associar práticas artísticas à vida é uma forma de beneficiar a sua saúde, tanto física quanto mental — trata-se da chamada arteterapia, que consiste no uso de recursos artísticos/visuais ou expressivos como elemento terapêutico.`,
-            }
-        ];
-
-        if (!localStorage.categorias) {
-            localStorage.setItem('categorias', JSON.stringify(categorias));
-        }
-    }
-
     updateTableCategoria() {
         this.CategoriaController.updateTable(this.tableCategoria[1]);
     }
@@ -142,5 +105,3 @@ export default class CategoriaView {
     }
 
 }
-
-new CategoriaView();

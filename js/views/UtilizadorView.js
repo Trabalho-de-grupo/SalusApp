@@ -1,7 +1,7 @@
 import UtilizadorController from '../controllers/UtilizadorController.js'
 
 
-class UtilizadorView {
+export default class UtilizadorView {
     constructor() {
         this.utilizadorController = new UtilizadorController()
 
@@ -62,5 +62,3 @@ class UtilizadorView {
     }
 
 }
-
-new UtilizadorView();

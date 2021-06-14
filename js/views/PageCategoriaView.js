@@ -10,9 +10,7 @@ export default class PageCategoriaView {
 
     }
 
-    updatePageCategoria () {
+    updatePageCategoria() {
         this.PageCategoriaController.updatePage(this.tableCategoria);
     }
 }
-
-new PageCategoriaView();
