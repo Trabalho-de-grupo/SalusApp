@@ -9,33 +9,47 @@ export default class PageCategoriaController {
 
     updatePage(table) {
 
-        Object.values(this.categorias).forEach(categoria => {
-            
-        })
-
+        //Object.values(this.categorias).forEach(categoria => {  })
+        console.log(table)
         console.log(this.categorias)
-        console.log(this.categorias.length)
-        let end = this.categorias.length
+        let tableTeste = ""
 
-        for(let i = 0; i < end; i=i+3) {
+        let length = this.categorias.length
+
+
+        for(let i = 0; i < length; i=i+3) {
             console.log(i)
+            tableTeste =+ `  
+                <tr class="linhaCategoria">
+            `
+            for(let j = i; j < i+3; j++){
+                console.log(j)
+                if(j > length)
+                    break;
+
+                tableTeste =+ `
+                <td scope="row">
+                    <div class="atividade1"></div>
+                </td>
+                `
+            }
         }
 
 
-            /*
-            table.innerHTML += `
-                <tr class="linhaCategoria">
-                    <td scope="row">${categoria.id}</td>
-                    <td>${categoria.name}</td>
-                    <td>${categoria.color}</td>
-                    <td>${categoria.icon}</td>
-                    <td>${categoria.description}</td>
-                    <td>
-                        <button class="btnEditCategoria btn btn-outline-secondary" data-toggle="modal" data-target="#editCategoriaModal">Edit</button>
-                        <button class="btnDeleteCategoria btn btn-outline-secondary" data-toggle="modal" data-target="#deleteCategoriaModal">Delete</button>
-                    </td>
-                </tr>
-            `
-            */
+        /*
+        table.innerHTML += `
+            <tr class="linhaCategoria">
+                <td scope="row">${categoria.id}</td>
+                <td>${categoria.name}</td>
+                <td>${categoria.color}</td>
+                <td>${categoria.icon}</td>
+                <td>${categoria.description}</td>
+                <td>
+                    <button class="btnEditCategoria btn btn-outline-secondary" data-toggle="modal" data-target="#editCategoriaModal">Edit</button>
+                    <button class="btnDeleteCategoria btn btn-outline-secondary" data-toggle="modal" data-target="#deleteCategoriaModal">Delete</button>
+                </td>
+            </tr>
+        `
+        */
     }
 }

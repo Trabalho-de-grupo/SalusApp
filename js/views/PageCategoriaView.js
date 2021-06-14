@@ -11,7 +11,6 @@ export default class PageCategoriaView {
     }
 
     updatePageCategoria () {
-        console.log(this.tableCategoria)
         this.PageCategoriaController.updatePage(this.tableCategoria);
     }
 }
