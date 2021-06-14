@@ -40,6 +40,9 @@ export default class CategoriaView {
         for (const btnEdit of this.btnEditCategoria) {
             btnEdit.addEventListener('click', () => {
                 let id = (btnEdit.parentNode.parentNode.cells[0])
+                console.log(this.inputIconCategoria.value)
+                console.log(this.inputIconCategoria)
+
                 this.CategoriaController.BtnEditData(id, this.inputNameEditCategoria, this.inputColorEditCategoria, this.inputIconEditCategoria, this.inputDescEditCategoria)
             });
         }
@@ -72,7 +75,7 @@ export default class CategoriaView {
                 if (this.inputNameCategoria.value == '' || this.inputColorCategoria.value == '' || this.inputIconCategoria.value == '' || this.inputDescCategoria.value == '') {
                     throw Error('Preencha todos os campos!');
                 } else {
-                    this.CategoriaController.newCategoria(this.inputNameCategoria, this.inputColorCategoria, this.inputDescCategoria);
+                    this.CategoriaController.newCategoria(this.inputNameCategoria, this.inputColorCategoria, this.inputIconCategoria, this.inputDescCategoria);
                 }
             } catch (e) {
                 this.displayMessage(e, 'danger');
