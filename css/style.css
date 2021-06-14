@@ -406,7 +406,9 @@ header li{
 
 }
 .fundo2{
-    background-color: #EEEEEE ;
+    background-image: url("../img/Atividades\ –\ 1.png") ;
+    width: 100%;
+    height: 100%;
 }
 .nivel{
     margin-left: 13%;
