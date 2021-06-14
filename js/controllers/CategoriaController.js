@@ -5,6 +5,7 @@ export default class CategoriaController {
     constructor() {
         this.users = localStorage.users ? JSON.parse(localStorage.users) : []
         this.categorias = localStorage.categorias ? JSON.parse(localStorage.categorias) : []
+        this.idUtilizador
 
     }
 
@@ -17,7 +18,7 @@ export default class CategoriaController {
             } else {
                 const newId = this.categorias.length > 0 ? this.categorias[this.categorias.length - 1].id + 1 : 1
                 let iconPath = icon.value
-                let iconPath2 = iconPath.substring(iconPath.lastIndexOf("\\")+1)
+                let iconPath2 = iconPath.substring(iconPath.lastIndexOf("\\") + 1)
                 this.categorias.push(new CategoriaModel(newId, name.value, color.value, iconPath2, description.value));
                 localStorage.setItem('categorias', JSON.stringify(this.categorias));
                 location.reload();
@@ -44,11 +45,11 @@ export default class CategoriaController {
     }
 
     BtnEditData(chave, name, color, icon, desc) {
+        this.idUtilizador = chave.innerText
         Object.values(this.categorias).forEach(categoria => {
-            if(categoria.id == chave.innerHTML) {
+            if (categoria.id == chave.innerHTML) {
                 name.setAttribute('placeholder', categoria.name);
                 color.setAttribute('placeholder', categoria.color);
-                console.log(color)
                 icon.setAttribute('value', categoria.icon);
                 desc.setAttribute('placeholder', categoria.description);
             }
@@ -93,15 +94,16 @@ export default class CategoriaController {
 
     BtnDeleteData(chave) {
         Object.values(this.categorias).forEach(categoria => {
-            if(categoria.id == chave.innerHTML) {
-                console.log(categoria) 
-
+            if (categoria.id == chave.innerHTML) {
+                this.idUtilizador = chave.innerHTML
             }
         })
     }
 
     BtnDeleteConfirmar() {
-        console.log("Ola Delete")
+        this.categorias = this.categorias.filter(categoria => categoria.id != this.idUtilizador)
+        localStorage.setItem('categorias', JSON.stringify(this.categorias));
+        location.reload();
     }
 
 

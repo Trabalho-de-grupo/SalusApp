@@ -5,7 +5,7 @@ export default class CategoriaView {
     constructor() {
         this.CategoriaController = new CategoriaController();
         this.CreateCategoriaStorage();
-       
+
         this.tableCategoria = document.querySelectorAll('table');
         this.updateTableCategoria();
 
@@ -40,9 +40,6 @@ export default class CategoriaView {
         for (const btnEdit of this.btnEditCategoria) {
             btnEdit.addEventListener('click', () => {
                 let id = (btnEdit.parentNode.parentNode.cells[0])
-                console.log(this.inputIconCategoria.value)
-                console.log(this.inputIconCategoria)
-
                 this.CategoriaController.BtnEditData(id, this.inputNameEditCategoria, this.inputColorEditCategoria, this.inputIconEditCategoria, this.inputDescEditCategoria)
             });
         }
@@ -50,7 +47,21 @@ export default class CategoriaView {
 
     bindEditLine() {
         this.btnEditLineCategoria.addEventListener('click', () => {
-            this.CategoriaController.BtnEditConfirmar()
+            try {
+                this.CategoriaController.BtnEditConfirmar(this.inputNameEditCategoria, this.inputColorEditCategoria, this.inputIconEditCategoria, this.inputDescEditCategoria)
+                this.displayMessage('Alterações Guardadas com sucesso!', 'success');
+                setTimeout(() => {
+                    location.reload()
+                },
+                2000);
+                 
+            } catch (e) {
+                this.displayMessage(e, 'danger');
+                this.inputNameEditCategoria.value = ""
+                this.inputColorEditCategoria.value = ""
+                this.inputIconEditCategoria.value = ""
+                this.inputDescEditCategoria.value = ""
+            }
         });
     }
 
@@ -83,14 +94,18 @@ export default class CategoriaView {
         });
     }
 
-
     CreateCategoriaStorage() {
         const categorias = [{
             id: 1,
             name: 'Yoga',
             color: 'F6B8C3',
-            icon: 'yoga.png',
-            description: 'Yoga é uma atividade muito boa',
+            icon: 'exercise.png',
+            description: `É a prática que tem como
+                        objetivo controlar o stress,
+                        ansiedade, dores no corpo,
+                        melhorar o equilíbrio e
+                        promover a sensação de
+                        bem estar.`,
         }];
 
         if (!localStorage.categorias) {
