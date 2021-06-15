@@ -5,6 +5,7 @@ export default class PageCategoriaController {
     constructor() {
         this.categorias = localStorage.categorias ? JSON.parse(localStorage.categorias) : []
         this.idUtilizador
+        this.tableTeste = ""
     }
 
     updatePage(table) {
@@ -12,30 +13,55 @@ export default class PageCategoriaController {
         //Object.values(this.categorias).forEach(categoria => {  })
         console.log(table)
         console.log(this.categorias)
-        let tableTeste = ""
 
         let length = this.categorias.length
 
+        for (let i = 0; i < length; i = i + 3) {
+            if (i > length) {
+                break;
+            } else {
+                this.tableTeste +=
+                    `  
+                    <tr class="linhaCategoria">
+                `
+                for (let j = i; j < i + 3; j++) {
+                    if (j >= length) {
+                        break;
+                    } else {
+                        this.tableTeste +=
+                            `
+                    <td>
+                        <div class="imagemCategoria" style="background-color:#${this.categorias[j].color};">${this.categorias[j].name}<img src="../img/${this.categorias[j].icon}" width="150px" height="150px"></div>
+                    </td>
+                    `
+                    }
+                }
+                this.tableTeste +=
+                    `  
+                    </tr>
+                    <tr class="linhaDescCategoria">
+                `
 
-        for(let i = 0; i < length; i=i+3) {
-            console.log(i)
-            tableTeste =+ `  
-                <tr class="linhaCategoria">
-            `
-            for(let j = i; j < i+3; j++){
-                console.log(j)
-                if(j > length)
-                    break;
-
-                tableTeste =+ `
-                <td scope="row">
-                    <div class="atividade1"></div>
-                </td>
+                for (let j = i; j < i + 3; j++) {
+                    if (j >= length) {
+                        break;
+                    } else {
+                        this.tableTeste +=
+                            `
+                        <td>
+                            <div class="descCategoria">${this.categorias[j].description}</div>
+                        </td>
+                    `
+                    }
+                }
+                this.tableTeste +=
+                    `  
+                    </tr>
                 `
             }
         }
 
-
+        table.innerHTML += this.tableTeste
         /*
         table.innerHTML += `
             <tr class="linhaCategoria">
