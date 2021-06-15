@@ -10,6 +10,8 @@ export default class PageAtividadeController {
     updatePage(table) {
         this.atividades = this.atividades.filter(atividade => atividade.idCategoria == sessionStorage.getItem('categoriaID'))
         let length = this.atividades.length
+        console.log(length)
+        console.log(this.atividades)
 
         for (let i = 0; i < length; i = i + 3) {
             if (i > length) {
@@ -26,7 +28,7 @@ export default class PageAtividadeController {
                         this.tableTeste +=
                             `
                 <td>
-                    <div class="imagemAtividade" style="background-color:#${this.categorias[j].color};">
+                    <div class="imagemAtividade" style="background-color:#${this.categorias[(this.atividades[j].idCategoria)-1].color};">
                     <span class="nomeAtividade">${this.atividades[j].name}</span>
                     <img class="iconAtividade" src="../img/${this.atividades[j].image}" width="150px" height="150px">
                     <div class="imgOverlay"><a class="linkVerMais" href="#"><div class="verMais"><span>VER MAIS</span></div></a></div>

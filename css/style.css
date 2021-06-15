@@ -560,6 +560,27 @@ header li {
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+.imagemAtividade {
+    width: 300px;
+    height: 200px;
+    margin: 50px;
+    border-radius: 5px 5px 5px 5px;
+    position: relative;
+    text-align: center;
+}
+.nomeAtividade{
+    position: absolute;
+    top:1%;
+    left: 5%;
+}
+.iconAtividade{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 .linkVerMais{
     text-decoration: none;
     color: #706F6F;
@@ -601,6 +622,12 @@ header li {
     margin-top: 5%;
 }
 .descCategoria{
+    padding-right: 12%;
+    padding-left: 12%;
+    padding-top:0;
+    padding-bottom: 0;
+}
+.descAtividade {
     padding-right: 12%;
     padding-left: 12%;
     padding-top:0;
