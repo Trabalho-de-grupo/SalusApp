@@ -3,6 +3,7 @@ import PerfilView from './views/PerfilView.js'
 import CategoriaView from './views/CategoriaView.js'
 import UtilizadorView from './views/UtilizadorView.js'
 import PageCategoriaView from './views/PageCategoriaView.js';
+import EstatisticaView from './views/EstatisticaView.js';
 
 class App {
     constructor() {
@@ -10,7 +11,8 @@ class App {
             'registo': [UserView],
             'perfil': [PerfilView],
             'admin': [UtilizadorView, CategoriaView],
-            'categoria': [PageCategoriaView]
+            'categoria': [PageCategoriaView],
+            'estatistica': [EstatisticaView]
         };
 
         // import dummy data for testing purposes
