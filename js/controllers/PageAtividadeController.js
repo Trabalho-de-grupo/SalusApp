@@ -29,7 +29,7 @@ export default class PageAtividadeController {
                     <div class="imagemAtividade" style="background-color:#${this.categorias[(this.atividades[j].idCategoria)-1].color};">
                     <span class="nomeAtividade">${this.atividades[j].name}</span>
                     <img class="iconAtividade" src="../img/${this.atividades[j].image}" width="150px" height="150px">
-                    <div class="imgOverlay"><a class="linkVerMais" href="#"><div class="verMais"><span>VER MAIS</span></div></a></div>
+                    <div class="imgOverlay"><a class="linkVerMaisAtividade" href="#"><div class="verMais"><span>VER MAIS</span></div></a></div>
                     </div>
                 </td>
                 `
@@ -60,5 +60,15 @@ export default class PageAtividadeController {
             }
         }
         table.innerHTML += this.tableTeste
+    }
+
+    sendLinkAtividade(name) {
+        Object.values(this.atividades).forEach(atividade => {
+            if (atividade.name == name) {
+                console.log(atividade.id)
+                //sessionStorage.setItem('atividadeID', atividade.id);
+                //window.location.replace('/html/atividade.html')
+            }
+        });
     }
 }

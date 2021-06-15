@@ -6,7 +6,18 @@ export default class AtividadeView {
 
         this.tableAtividade = document.querySelector('table');
         this.updatePageListagem();
+
+        this.btnLinkVerMais = document.getElementsByClassName("linkVerMaisAtividade");
+        this.bindBtnAtividade();
     }
+
+    bindBtnAtividade() {
+        for (const btnVerMais of this.btnLinkVerMais) {
+            btnVerMais.addEventListener('click', () => {
+                this.PageAtividadeController.sendLinkAtividade(btnVerMais.parentNode.parentNode.children[0].innerHTML)
+            });
+        }
+    } 
 
     updatePageListagem() {
         if (sessionStorage.getItem('categoriaID') != null) {
