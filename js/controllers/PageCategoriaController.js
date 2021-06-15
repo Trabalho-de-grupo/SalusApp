@@ -4,16 +4,11 @@ export default class PageCategoriaController {
 
     constructor() {
         this.categorias = localStorage.categorias ? JSON.parse(localStorage.categorias) : []
-        this.idUtilizador
         this.tableTeste = ""
+        sessionStorage.removeItem('categoriaID')
     }
 
     updatePage(table) {
-
-        //Object.values(this.categorias).forEach(categoria => {  })
-        console.log(table)
-        console.log(this.categorias)
-
         let length = this.categorias.length
 
         for (let i = 0; i < length; i = i + 3) {
@@ -34,9 +29,8 @@ export default class PageCategoriaController {
                         <div class="imagemCategoria" style="background-color:#${this.categorias[j].color};">
                         <span class="nomeCategoria">${this.categorias[j].name}</span>
                         <img class="iconCategoria" src="../img/${this.categorias[j].icon}" width="150px" height="150px">
-                        <div class="imgOverlay"><a class="linkVerMais" href="listagem.html"><div class="verMais"><span>VER MAIS</span></div></a></div>
+                        <div class="imgOverlay"><a class="linkVerMais" href="#"><div class="verMais"><span>VER MAIS</span></div></a></div>
                         </div>
-                        <div class="hide"><a href="listagem.html"></a></div>
                     </td>
                     `
                     }
@@ -65,22 +59,15 @@ export default class PageCategoriaController {
                 `
             }
         }
-
         table.innerHTML += this.tableTeste
-        /*
-        table.innerHTML += `
-            <tr class="linhaCategoria">
-                <td scope="row">${categoria.id}</td>
-                <td>${categoria.name}</td>
-                <td>${categoria.color}</td>
-                <td>${categoria.icon}</td>
-                <td>${categoria.description}</td>
-                <td>
-                    <button class="btnEditCategoria btn btn-outline-secondary" data-toggle="modal" data-target="#editCategoriaModal">Edit</button>
-                    <button class="btnDeleteCategoria btn btn-outline-secondary" data-toggle="modal" data-target="#deleteCategoriaModal">Delete</button>
-                </td>
-            </tr>
-        `
-        */
+    }
+
+    sendLinkAtividade(name) {
+        Object.values(this.categorias).forEach(categoria => {
+            if (categoria.name == name) {
+                sessionStorage.setItem('categoriaID', categoria.id);
+                window.location.replace('/html/listagem.html')
+            }
+        });
     }
 }
