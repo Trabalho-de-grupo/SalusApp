@@ -17,7 +17,7 @@ class App {
             'registo': [UserView],
             'perfil': [PerfilView],
             'admin': [UtilizadorView, CategoriaView, AtividadeView],
-            'categoria': [PageCategoriaView],
+            'categoria': [PageCategoriaView, PageAtividadeView],
             'listagem': [PageAtividadeView],
             'estatistica': [EstatisticaView]
         };
@@ -33,7 +33,7 @@ class App {
         const users = [{
                 id: 1,
                 username: 'user1',
-                email: 'email1',
+                email: 'email1@',
                 password: 'pass1',
                 idActivities: 'null',
                 status: 'admin'
@@ -41,10 +41,34 @@ class App {
             {
                 id: 2,
                 username: 'user2',
-                email: 'email2',
+                email: 'email2@',
                 password: 'pass2',
                 idActivities: 'null',
                 status: 'user'
+            },
+            {
+                id: 3,
+                username: 'tiza',
+                email: 'tiza@',
+                password: '1234',
+                idActivities: 'null',
+                status: 'admin'
+            },
+            {
+                id: 4,
+                username: 'alfonso',
+                email: 'alfonso@',
+                password: '1234',
+                idActivities: 'null',
+                status: 'admin'
+            },
+            {
+                id: 5,
+                username: 'daniel',
+                email: 'daniel@',
+                password: '1234',
+                idActivities: 'null',
+                status: 'admin'
             }
         ];
 
@@ -66,7 +90,7 @@ class App {
                 id: 3,
                 name: 'JARDINAGEM',
                 color: 'E0B0FF',
-                icon: 'exercise.png',
+                icon: 'jardinagem.png',
                 description: `A jardinagem traz benefícios para a saúde física e mental. Estudos indicam até que é positiva para a destreza física, mental. Seja no jardim ou na varanda, experimente.`,
             },
             {
@@ -75,7 +99,14 @@ class App {
                 color: 'C8A2C8',
                 icon: 'artist.png',
                 description: `Associar práticas artísticas à vida é uma forma de beneficiar a sua saúde, tanto física quanto mental — trata-se da chamada arteterapia, que consiste no uso de recursos artísticos/visuais ou expressivos como elemento terapêutico.`,
-            }
+            },
+            {
+                id: 5,
+                name: 'FITNESS',
+                color: 'FF78A9',
+                icon: 'dumbbell.png',
+                description: ``,
+            },
         ];
 
         const atividades = [{
