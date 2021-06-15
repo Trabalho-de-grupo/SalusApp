@@ -10,8 +10,6 @@ export default class PageAtividadeController {
     updatePage(table) {
         this.atividades = this.atividades.filter(atividade => atividade.idCategoria == sessionStorage.getItem('categoriaID'))
         let length = this.atividades.length
-        console.log(length)
-        console.log(this.atividades)
 
         for (let i = 0; i < length; i = i + 3) {
             if (i > length) {

@@ -131,21 +131,21 @@ class App {
         ];
 
         const atividades = [{
-            id: 1,
-            idCategoria: 1,
-            name: 'Yoga para Iniciantes',
-            image: '1',
-            video: '1',
-            description: `As vantagens de realizar aulas de yoga para iniciantes vão muito além do físico, já que é possível trabalhar tanto o lado físico quanto o mental.`,
-            likes: '1',
-            views: '1',
-            materials: '1',
-            steps: '1',
-            time: '1',
-            date: '1',
+                id: 1,
+                idCategoria: 1,
+                name: 'Yoga para Iniciantes',
+                image: '1',
+                video: '1',
+                description: `As vantagens de realizar aulas de yoga para iniciantes vão muito além do físico, já que é possível trabalhar tanto o lado físico quanto o mental.`,
+                likes: '1',
+                views: '1',
+                materials: '1',
+                steps: '1',
+                time: '1',
+                date: '1',
             }
         ];
-        
+
         //Criaçao do Object Users no LocalStorage
         if (!localStorage.users) {
             localStorage.setItem('users', JSON.stringify(users));

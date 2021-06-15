@@ -12,7 +12,8 @@ export default class AtividadeView {
         if (sessionStorage.getItem('categoriaID') != null) {
             this.PageAtividadeController.updatePage(this.tableAtividade);
         } else {
-            console.log("window.location.replace('/html/categoria.html') - PAGEATIVIDADEVIEW")
+            //Segurança que nao permite utilizador ir para listagem sem escolher categoria
+            //window.location.replace('/html/categoria.html')
         }
     }
 }

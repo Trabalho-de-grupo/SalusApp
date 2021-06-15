@@ -18,7 +18,6 @@ export default class AtividadeController {
         });
     }
 
-
     newAtividade(idCategoria, name, image, video, desc, materials, steps, time) {
         if (this.atividades.find(atividade => atividade.name == name.value)) {
             throw Error(`Nome da Atividade "${name.value}" já existe!`);
@@ -136,7 +135,7 @@ export default class AtividadeController {
 
     BtnDeleteConfirmar() {
         this.atividades = this.atividades.filter(atividade => atividade.id != this.idUtilizador)
-        localStorage.setItem('atividade', JSON.stringify(this.atividade));
+        localStorage.setItem('atividades', JSON.stringify(this.atividades));
         location.reload();
     }
 }
