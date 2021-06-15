@@ -129,14 +129,12 @@ export default class AtividadeController {
         Object.values(this.atividades).forEach(atividade => {
             if (atividade.id == chave.innerHTML) {
                 this.idUtilizador = chave.innerHTML
-                console.log(this.idUtilizador)
             }
         })
     }
 
     BtnDeleteConfirmar() {
         this.atividades = this.atividades.filter(atividade => atividade.id != this.idUtilizador)
-        console.log(this.atividades)
         localStorage.setItem('atividades', JSON.stringify(this.atividades));
         location.reload();
     }
