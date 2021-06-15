@@ -217,9 +217,6 @@
     border-radius: 5px 5px 5px 5px;
 }
 
-.descCategoria {
-
-}
 
 .tableAtividade {
     display: flex;
@@ -550,5 +547,5 @@ header li {
 }
 .nomeCategoria{
     float: left;
-    
+
 }
