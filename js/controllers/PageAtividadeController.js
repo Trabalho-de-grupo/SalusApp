@@ -66,7 +66,7 @@ export default class PageAtividadeController {
         Object.values(this.atividades).forEach(atividade => {
             if (atividade.name == name) {
                 console.log(atividade.id)
-                //sessionStorage.setItem('atividadeID', atividade.id);
+                sessionStorage.setItem('atividadeID', atividade.id);
                 //window.location.replace('/html/atividade.html')
             }
         });

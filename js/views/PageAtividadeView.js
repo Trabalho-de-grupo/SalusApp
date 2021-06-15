@@ -20,7 +20,7 @@ export default class AtividadeView {
     } 
 
     updatePageListagem() {
-        if (sessionStorage.getItem('categoriaID') != null) {
+        if (sessionStorage.getItem('atividadeID') != null) {
             this.PageAtividadeController.updatePage(this.tableAtividade);
         } else {
             //Segurança que nao permite utilizador ir para listagem sem escolher categoria
