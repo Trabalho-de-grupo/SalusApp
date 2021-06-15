@@ -18,7 +18,6 @@ export default class AtividadeController {
         });
     }
 
-
     newAtividade(idCategoria, name, image, video, desc, materials, steps, time) {
         if (this.atividades.find(atividade => atividade.name == name.value)) {
             throw Error(`Nome da Atividade "${name.value}" já existe!`);
@@ -130,13 +129,15 @@ export default class AtividadeController {
         Object.values(this.atividades).forEach(atividade => {
             if (atividade.id == chave.innerHTML) {
                 this.idUtilizador = chave.innerHTML
+                console.log(this.idUtilizador)
             }
         })
     }
 
     BtnDeleteConfirmar() {
         this.atividades = this.atividades.filter(atividade => atividade.id != this.idUtilizador)
-        localStorage.setItem('atividade', JSON.stringify(this.atividade));
+        console.log(this.atividades)
+        localStorage.setItem('atividades', JSON.stringify(this.atividades));
         location.reload();
     }
 }
