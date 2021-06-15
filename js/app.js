@@ -124,7 +124,7 @@ class App {
             {
                 id: 8,
                 name: 'DIY',
-                color: 'CBCODC',
+                color: 'CBC0DC',
                 icon: 'craft.png',
                 description: `A mentalidade por trás do DIY valoriza a criatividade e a fabricação ou customização de espaços, ou objetos utilizando itens que normalmente temos em casa.`,
             }
