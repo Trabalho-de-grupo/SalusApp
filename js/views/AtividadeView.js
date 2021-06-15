@@ -1,4 +1,4 @@
-import AtividadeController from '../controllers/AtividadeController'
+import AtividadeController from '../controllers/AtividadeController.js'
 
 export default class AtividadeView {
     constructor() {

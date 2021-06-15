@@ -4,14 +4,14 @@ import CategoriaView from './views/CategoriaView.js'
 import UtilizadorView from './views/UtilizadorView.js'
 import PageCategoriaView from './views/PageCategoriaView.js';
 import EstatisticaView from './views/EstatisticaView.js';
-import AtividadeViews from './views/AtividadesViews.js';
+import AtividadeView from './views/AtividadeView.js';
 
 class App {
     constructor() {
         this.routes = {
             'registo': [UserView],
             'perfil': [PerfilView],
-            'admin': [UtilizadorView, CategoriaView, AtividadesViews],
+            'admin': [UtilizadorView, CategoriaView, AtividadeView],
             'categoria': [PageCategoriaView],
             'estatistica': [EstatisticaView]
         };
@@ -74,17 +74,17 @@ class App {
 
         const atividades = [{
             id: 1,
-            name: 'Yoga',
-            color: 'F6B8C3',
-            icon: 'exercise.png',
-            description: `É a prática que tem como objetivo controlar o stress, ansiedade, dores no corpo, melhorar o equilíbrio e promover a sensação de bem estar.`,
-            },
-            {   
-            id: 2,
-            name: 'Receitas',
-            color: 'B8B8B8',
-            icon: 'cooking.png',
-            description: `Para se inspirar, aprender a cozinhar, experimentar ideias novas e descobrir pratos saborosos, rápidos, fáceis, económicos e saudáveis.`,
+            idCategoria: 1,
+            name: 'Yoga para Iniciantes',
+            image: '1',
+            video: '1',
+            description: `As vantagens de realizar aulas de yoga para iniciantes vão muito além do físico, já que é possível trabalhar tanto o lado físico quanto o mental.`,
+            likes: '1',
+            views: '1',
+            materials: '1',
+            steps: '1',
+            time: '1',
+            date: '1',
             }
         ];
         

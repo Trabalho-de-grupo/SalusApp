@@ -1,4 +1,4 @@
-import AtividadeModel from '../models/AtividadeModel'
+import AtividadeModel from '../models/AtividadeModel.js'
 
 export default class AtividadeController {
     constructor() {
