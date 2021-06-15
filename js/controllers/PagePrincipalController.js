@@ -6,8 +6,4 @@ export default class PagePrincipalController {
         this.categorias = localStorage.categorias ? JSON.parse(localStorage.categorias) : []
     }
 
-
-
-
-
 }
