@@ -40,7 +40,6 @@ export default class PageAtividadeController {
                 </tr>
                 <tr class="linhaDescAtividade">
             `
-
                 for (let j = i; j < i + 3; j++) {
                     if (j >= length) {
                         break;

@@ -11,6 +11,8 @@ import EstatisticaView from './views/EstatisticaView.js';
 import AtividadeView from './views/AtividadeView.js';
 import PageAtividadeView from './views/PageAtividadeView.js';
 
+import PagePrincipalView from './views/PagePrincipalView.js';
+
 class App {
     constructor() {
         this.routes = {
@@ -19,7 +21,8 @@ class App {
             'admin': [UtilizadorView, CategoriaView, AtividadeView],
             'categoria': [PageCategoriaView, PageAtividadeView],
             'listagem': [PageAtividadeView],
-            'estatistica': [EstatisticaView]
+            'estatistica': [EstatisticaView],
+            'atividade': [PagePrincipalView]
         };
 
         // import dummy data for testing purposes
