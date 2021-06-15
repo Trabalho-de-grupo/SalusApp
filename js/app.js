@@ -105,8 +105,29 @@ class App {
                 name: 'FITNESS',
                 color: 'FF78A9',
                 icon: 'dumbbell.png',
-                description: ``,
+                description: `O objetivo da prática regular de exercício não é apenas conseguir um corpo excecional, mas antes obter uma forma física que nos permita sentirmo-nos bem.`,
             },
+            {
+                id: 6,
+                name: 'JOGOS',
+                color: 'DDA0DD',
+                icon: 'game-controller.png',
+                description: `Os jogos podem ajudar as pessoas, proporcionando uma maneira de relaxar, se conectar com outras pessoas e se sentir competente.`,
+            },
+            {
+                id: 7,
+                name: 'MEDITAÇÃO',
+                color: 'D6A8B6',
+                icon: 'lotus.png',
+                description: `O objetivo da meditação é tranquilizar a mente, alcançar a paz interior e um relaxamento profundo, que persista e nos acompanhe durante as nossas atividades quotidianas, com inúmeras vantagens para a saúde mental e física.`,
+            },
+            {
+                id: 8,
+                name: 'DIY',
+                color: 'CBCODC',
+                icon: 'craft.png',
+                description: `A mentalidade por trás do DIY valoriza a criatividade e a fabricação ou customização de espaços, ou objetos utilizando itens que normalmente temos em casa.`,
+            }
         ];
 
         const atividades = [{
