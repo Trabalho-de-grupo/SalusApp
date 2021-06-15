@@ -31,7 +31,7 @@ export default class PageCategoriaController {
                         this.tableTeste +=
                             `
                     <td>
-                        <div class="imagemCategoria" style="background-color:#${this.categorias[j].color};">${this.categorias[j].name}<img src="../img/${this.categorias[j].icon}" width="150px" height="150px"></div>
+                        <div class="imagemCategoria" style="background-color:#${this.categorias[j].color};"><span class="nomeCategoria">${this.categorias[j].name}</span><img class="iconCategoria" src="../img/${this.categorias[j].icon}" width="150px" height="150px"></div>
                     </td>
                     `
                     }
