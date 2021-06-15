@@ -41,6 +41,12 @@ export default class AtividadeView {
         this.bindEditLine();
         this.bindDeleteAtividade();
         this.bindDeleteLine();
+
+        this.createSelectCategoria();
+    }
+
+    createSelectCategoria() {
+        this.AtividadeController.createSelect(this.inputDropdownCategoriatAtividade,this.inputDropdownCategoriaEditAtividade)
     }
 
     bindEditAtividade() {
@@ -98,7 +104,6 @@ export default class AtividadeView {
     }
 
     updateTableAtividade() {
-        console.log(this.tableAtividade[2])
         this.AtividadeController.updateTable(this.tableAtividade[2]);
     }
 

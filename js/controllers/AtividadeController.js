@@ -7,6 +7,18 @@ export default class AtividadeController {
         this.idUtilizador
     }
 
+    createSelect(select, selectEdit) {
+        Object.values(this.categorias).forEach(categoria => {
+            select.innerHTML += `
+                <option value="${categoria.id}">${categoria.name}</option>
+            `
+            selectEdit.innerHTML += `
+                <option value="${categoria.id}">${categoria.name}</option>
+            `
+        });
+    }
+
+
     newAtividade(idCategoria, name, image, video, desc, materials, steps, time) {
         if (this.atividades.find(atividade => atividade.name == name.value)) {
             throw Error(`Nome da Atividade "${name.value}" já existe!`);
