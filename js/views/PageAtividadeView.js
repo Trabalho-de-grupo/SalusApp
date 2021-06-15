@@ -12,7 +12,7 @@ export default class AtividadeView {
         if (sessionStorage.getItem('categoriaID') != null) {
             this.PageAtividadeController.updatePage(this.tableAtividade);
         } else {
-            window.location.replace('/html/categoria.html')
+            console.log("window.location.replace('/html/categoria.html') - PAGEATIVIDADEVIEW")
         }
     }
 }
