@@ -1,11 +1,9 @@
 import CategoriaModel from '../models/CategoriaModel.js'
 
 export default class CategoriaController {
-
     constructor() {
         this.categorias = localStorage.categorias ? JSON.parse(localStorage.categorias) : []
         this.idUtilizador
-
     }
 
     newCategoria(name, color, icon, description) {
