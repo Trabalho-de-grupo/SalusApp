@@ -40,7 +40,6 @@ export default class PageAtividadeController {
                 </tr>
                 <tr class="linhaDescAtividade">
             `
-
                 for (let j = i; j < i + 3; j++) {
                     if (j >= length) {
                         break;
@@ -65,9 +64,8 @@ export default class PageAtividadeController {
     sendLinkAtividade(name) {
         Object.values(this.atividades).forEach(atividade => {
             if (atividade.name == name) {
-                console.log(atividade.id)
                 sessionStorage.setItem('atividadeID', atividade.id);
-                //window.location.replace('/html/atividade.html')
+                window.location.replace('/html/atividade.html')
             }
         });
     }
