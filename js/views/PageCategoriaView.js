@@ -20,7 +20,7 @@ export default class PageCategoriaView {
             });
         }
     } 
-
+    
     updatePageCategoria() {
         this.PageCategoriaController.updatePage(this.tableCategoria);
     }
