@@ -9,6 +9,7 @@ export default class CategoriaView {
         this.updateTableCategoria();
 
         this.btnAdicionarCategoria = document.getElementById("btnAdicionarCategoria");
+        
         this.inputNameCategoria = document.getElementById("nameCategoria");
         this.inputColorCategoria = document.getElementById("colorCategoria");
         this.inputIconCategoria = document.getElementById("iconCategoria");
