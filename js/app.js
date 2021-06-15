@@ -1,10 +1,15 @@
 import UserView from './views/UserView.js'
-import PerfilView from './views/PerfilView.js'
-import CategoriaView from './views/CategoriaView.js'
 import UtilizadorView from './views/UtilizadorView.js'
+
+import PerfilView from './views/PerfilView.js'
+
+import CategoriaView from './views/CategoriaView.js'
 import PageCategoriaView from './views/PageCategoriaView.js';
+
 import EstatisticaView from './views/EstatisticaView.js';
+
 import AtividadeView from './views/AtividadeView.js';
+import PageAtividadeView from './views/PageAtividadeView.js';
 
 class App {
     constructor() {
@@ -13,6 +18,7 @@ class App {
             'perfil': [PerfilView],
             'admin': [UtilizadorView, CategoriaView, AtividadeView],
             'categoria': [PageCategoriaView],
+            'listagem': [PageAtividadeView],
             'estatistica': [EstatisticaView]
         };
 
