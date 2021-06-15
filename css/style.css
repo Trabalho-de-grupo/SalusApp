@@ -283,7 +283,7 @@ header li {
 
 .footer {
     background-color: #A8A8A7;
-    padding: 70px 0;
+    padding: 4% 0;
 
 }
 
@@ -294,7 +294,7 @@ header li {
 .row {
     display: flex;
     flex-wrap: wrap;
-    margin-left: 100px;
+    margin-left: 7%;
 
 }
 
@@ -304,7 +304,7 @@ header li {
 
 .footer-col {
     width: 50%;
-    padding: 0 15px;
+    padding: 0 3%;
 }
 
 .footer-col h4 {
@@ -313,6 +313,7 @@ header li {
 
 .footer-col ul li a {
     text-decoration: none;
+    color: white;
 }
 
 .footer-col li {
