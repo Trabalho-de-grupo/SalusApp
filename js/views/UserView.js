@@ -20,8 +20,16 @@ export default class UserView {
         this.logoutButton = document.getElementById('btnLogout');
         this.bindLoginForm();
 
-        this.messages = document.querySelector('#messages')
+        this.messages = document.querySelector('#messages');
         this.checkLoginStatus();
+
+        // Animation DOM
+        this.x = document.getElementById("login");
+        this.y = document.getElementById("registar");
+        this.z = document.getElementById("btn");
+        this.btnAnimation = document.querySelectorAll('.login-btn');
+        this.bindAnimationLogin();
+        this.bindAnimationRegisto();
     }
 
     bindRegisterForm() {
@@ -90,6 +98,18 @@ export default class UserView {
         } else {
             this.updateButtons('logout');
         }
+    }
+
+    bindAnimationLogin() {
+        this.btnAnimation[0].addEventListener('click', () => {
+            this.userController.btnLogin(this.x,this.y,this.z)
+        })
+    }
+
+    bindAnimationRegisto() {
+        this.btnAnimation[1].addEventListener('click', () => {
+            this.userController.btnRegistar(this.x,this.y,this.z)
+        })
     }
 
     displayMessage(message, type) {
