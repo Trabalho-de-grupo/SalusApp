@@ -486,13 +486,15 @@ header li {
 }
 
 .atividadeBox {
-    width: 468px;
-    height: 400px;
+    width: 500px;
+    height: 390px;
     background-color: #D2D2D2;
     color: #706F6F;
     box-sizing: border-box;
     margin: auto;
     display: block;
+    position: relative;
+    text-align: center;
 }
 
 .btn-add-cat {
@@ -599,8 +601,53 @@ header li {
     margin-top: 5%;
 }
 .descCategoria{
-    padding-right: 10%;
-    padding-left: 10%;
+    padding-right: 12%;
+    padding-left: 12%;
     padding-top:0;
-    padding-bottom: o;
+    padding-bottom: 0;
+}
+.ulAtividade{
+    list-style: none;
+}
+.finalizar {
+    padding: 1% 3%;
+    cursor: pointer;
+    margin-left: 70%;
+    margin-top:0;
+    margin-bottom:10%;
+    background: #F6B8C3;
+    border: 0;
+    outline: none;
+    text-decoration: underline;
+    text-decoration-color: #F6B8C3;
+    color: white;
+    font-size: 20px;
+    border-radius: 15px;
+    position: relative;
+}
+.atividade-col {
+    margin-top: 5%;
+    width: 50%;
+    padding:5%;
+    font-size:20px;
+    line-height: 2;
+}
+
+.atividade-col h4 {
+    color: #706F6F;
+}
+
+.atividade-col ul li a {
+    text-decoration: none;
+    color:#706F6F;
+}
+
+.aitividade-col li {
+    color:#706F6F;
+}
+.imgVideo{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
