@@ -48,16 +48,17 @@
     <div class="fundo2">
         <br><br><br>
     <h5 class="tituloAtividades">ATIVIDADES</h5>
-    <div class="botaoFiltros"><button onclick="filtros()"></button>
+    <div class="botaoFiltros"><button class="imgFiltros" onclick="filtros()"><img src="../img/setting-lines.png" width="40px" height="40px"></button>
         <div class="filtros">
         <div class="time">TEMPO</div>
-        <div class="rangeBar"></div>
-        <div class="ordenar"> ORDENAR</div>
+        <div class="rangeBar"><label for="customRange1" class="form-label"></label>
+            <input type="range" class="form-range" id="customRange1"></div>
+        <div class="ordenar"> ORDENAR POR</div>
 
-        <ul>
-            <li><button class="filtrar"></button></li>
-            <li><button class="filtrar"></button></li>
-            <li><button class="filtrar"></button></li>
+        <ul class="ordenarFiltros">
+            <li><button class="filtrar">GOSTOS</button></li>
+            <li><button class="filtrar">DATA</button></li>
+            <li><button class="filtrar">VIEWS</button></li>
 
         </ul>
     </div></div>

@@ -709,3 +709,26 @@ header li {
     width: 38px;
     height: 38px;
 }
+.imgFiltros{
+    border: none;
+    background-color: #EEEEEE;
+    border-radius: 10px;
+    margin-left: 1%;
+    width: 60px;
+    height: 60px;
+}
+.ordenarFiltros{
+    list-style: none;
+}
+
+.botaoFiltros{
+    margin-left:80%;
+}
+.filtros{
+    width:200px;
+    height: 200px;
+    background:  #707070;
+    margin-right: 50%;
+    text-align: center;
+
+}
