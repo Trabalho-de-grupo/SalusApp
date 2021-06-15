@@ -1,4 +1,4 @@
-export default class ListagemModel {
+export default class AtividadeModel {
     constructor(id, idCategoria, name, image, video, description, likes, views, materials, steps, time, date) {
         this.id = id
         this.idCategoria = idCategoria
