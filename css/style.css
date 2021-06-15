@@ -651,3 +651,21 @@ header li {
     left: 50%;
     transform: translate(-50%, -50%);
 }
+.tempo{
+    margin-left: 30%;
+    color:#706F6F;
+}
+.likePartilha{
+    margin-left: 17%;
+}
+.like {
+    border: none;
+    background-color: #F6B8C3;
+    border-radius: 10px;
+}
+.partilha {
+    border: none;
+    background-color: #F6B8C3;
+    border-radius: 10px;
+    margin-left: 1%;
+}
