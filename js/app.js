@@ -143,7 +143,8 @@ class App {
                 steps: '1',
                 time: '1',
                 date: '1',
-            }];
+            }
+        ];
 
         //Criaçao do Object Users no LocalStorage
         if (!localStorage.users) {
