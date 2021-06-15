@@ -82,7 +82,6 @@ export default class CategoriaController {
                         categoria.description = desc.value
                     }
                 }
-
             }
         })
         console.log(this.categorias)

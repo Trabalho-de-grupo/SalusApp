@@ -67,7 +67,7 @@ class App {
                 name: 'JARDINAGEM',
                 color: 'E0B0FF',
                 icon: 'exercise.png',
-                description: `A jardinagem traz benefícios para a saúde física e mental. Estudos indicam até que é positiva para a destreza física, mental e autoestima dos mais velhos. Além disso, agrada a pequenos e graúdos e não tem contraindicações. Seja no jardim ou na varanda, experimente.`,
+                description: `A jardinagem traz benefícios para a saúde física e mental. Estudos indicam até que é positiva para a destreza física, mental. Seja no jardim ou na varanda, experimente.`,
             },
             {
                 id: 4,

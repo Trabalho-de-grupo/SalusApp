@@ -593,3 +593,13 @@ header li {
 .imgOverlay:hover{
     opacity: 1;
 }
+#chart{
+    margin-right: 50%;
+    margin-top: 5%;
+}
+.descCategoria{
+    padding-right: 10%;
+    padding-left: 10%;
+    padding-top:0;
+    padding-bottom: o;
+}
