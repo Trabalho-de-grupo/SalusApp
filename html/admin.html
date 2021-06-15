@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="../css/style.css">
 
 </head>
-
 <header>
     <ul>
         <li class="botaoEsquerda"><button class="botaoMenu" onclick="menuOn()"><img src="../img/menu.png" width="30px"
@@ -35,262 +34,441 @@
 </header>
 
 <body>
-
-    <!-- Modal Edit User -->
-    <div class="modal fade" id="editUtilizadorModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Editar Registo</h5>
-                    <button type="button" class="close btn btn-outline-secondary" data-dismiss="modal"
-                        aria-label="Close">
-                        <span aria-hidden="true">X</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <br>
-                    Editar Utilizador
-                    <br><br>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="radioUserStatus" id="radioUserStatus"
-                            value="admin">
-                        <label class="form-check-label" for="radioUserStatus">
-                            Admin Status
-                        </label>
+    <div class="fundo2">
+        <!-- Modal Edit User -->
+        <div class="modal fade" id="editUtilizadorModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Editar Registo</h5>
+                        <button type="button" class="close btn btn-outline-secondary" data-dismiss="modal"
+                            aria-label="Close">
+                            <span aria-hidden="true">X</span>
+                        </button>
                     </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="radioUserStatus" id="radioUserStatus"
-                            value="user">
-                        <label class="form-check-label" for="radioUserStatus">
-                            User Status
-                        </label>
+                    <div class="modal-body">
+                        <br>
+                        Editar Utilizador
+                        <br><br>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="radioUserStatus" id="radioUserStatus"
+                                value="admin">
+                            <label class="form-check-label" for="radioUserStatus">
+                                Admin Status
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="radioUserStatus" id="radioUserStatus"
+                                value="user">
+                            <label class="form-check-label" for="radioUserStatus">
+                                User Status
+                            </label>
+                        </div>
+                        <br><br>
                     </div>
-                    <br><br>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-outline-success" data-dismiss="modal"
-                        id=btnEditLineUtilizador>Confirmar</button>
-                    <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Fechar</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal Edit Categoria -->
-    <div class="modal fade" id="editCategoriaModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Editar Categoria</h5>
-                    <button type="button" class="close btn btn-outline-secondary" data-dismiss="modal"
-                        aria-label="Close">
-                        <span aria-hidden="true">X</span>
-                    </button>
-                </div>
-
-                <div class="modal-body">
-                    <input type="text" class="form-control" name="nameEditCategoria" id="nameEditCategoria"
-                        aria-describedby="helpId" placeholder="NOME">
-                    <br>
-                    <input type="text" class="form-control" name="colorEditCategoria" id="colorEditCategoria"
-                        aria-describedby="helpId" maxlength="6" placeholder="#HEXADECIMAL">
-                    <br>
-                    <input type="file" class="custom-file-input" name="iconEditCategoria" id="iconEditCategoria"
-                        aria-describedby="helpId" accept="image/png, image/jpeg">
-                    <br><br>
-                    <textarea type="text" class="form-control" name="descriptionEditCategoria"
-                        id="descriptionEditCategoria" aria-describedby="helpId" placeholder="DESCRIÇÃO"></textarea>
-                </div>
-
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-outline-success" data-dismiss="modal"
-                        id=btnEditLineCategoria>Confirmar</button>
-                    <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Fechar</button>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-success" data-dismiss="modal"
+                            id=btnEditLineUtilizador>Confirmar</button>
+                        <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Fechar</button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <!-- Modal Delete User -->
-    <div class="modal fade" id="deleteUtilizadorModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Apagar Registo</h5>
-                    <button type="button" class="close btn btn-outline-secondary" data-dismiss="modal"
-                        aria-label="Close">
-                        <span aria-hidden="true">X</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <br>
-                    Tem a certeza que pretende apagar o registo ??
-                    <br><br>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-outline-success" data-dismiss="modal"
-                        id=btnDeleteLineUtilizador>Confirmar</button>
-                    <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Fechar</button>
-                </div>
-            </div>
-        </div>
-    </div>
+        <!-- Modal Edit Categoria -->
+        <div class="modal fade" id="editCategoriaModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Editar Categoria</h5>
+                        <button type="button" class="close btn btn-outline-secondary" data-dismiss="modal"
+                            aria-label="Close">
+                            <span aria-hidden="true">X</span>
+                        </button>
+                    </div>
 
-    <!-- Modal Delete Categoria -->
-    <div class="modal fade" id="deleteCategoriaModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Apagar Registo</h5>
-                    <button type="button" class="close btn btn-outline-secondary" data-dismiss="modal"
-                        aria-label="Close">
-                        <span aria-hidden="true">X</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <br>
-                    Tem a certeza que pretende apagar o registo ??
-                    <br><br>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-outline-success" data-dismiss="modal"
-                        id=btnDeleteLineCategoria>Confirmar</button>
-                    <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Fechar</button>
+                    <div class="modal-body">
+                        <input type="text" class="form-control" name="nameEditCategoria" id="nameEditCategoria"
+                            aria-describedby="helpId" placeholder="NOME">
+                        <br>
+                        <input type="text" class="form-control" name="colorEditCategoria" id="colorEditCategoria"
+                            aria-describedby="helpId" maxlength="6" placeholder="#HEXADECIMAL">
+                        <br>
+                        <input type="file" class="custom-file-input" name="iconEditCategoria" id="iconEditCategoria"
+                            aria-describedby="helpId" accept="image/png, image/jpeg">
+                        <br><br>
+                        <textarea type="text" class="form-control" name="descriptionEditCategoria"
+                            id="descriptionEditCategoria" aria-describedby="helpId" placeholder="DESCRIÇÃO"></textarea>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-success" data-dismiss="modal"
+                            id=btnEditLineCategoria>Confirmar</button>
+                        <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Fechar</button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <!-- Modal Add Categoria -->
-    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Adicionar Categoria</h5>
-                    <button type="button" class="close btn btn-outline-secondary" data-dismiss="modal"
-                        aria-label="Close">
-                        <span aria-hidden="true">X</span>
-                    </button>
+        <!-- Modal Edit Atividade -->
+        <div class="modal fade bd-example-modal-lg" id="editAtividadeModal" tabindex="-1" role="dialog"
+            aria-labelledby="myLargeModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Editar Atividade</h5>
+                        <button type="button" class="close btn btn-outline-secondary" data-dismiss="modal"
+                            aria-label="Close">
+                            <span aria-hidden="true">X</span>
+                        </button>
+                    </div>
+
+                    <div class="modal-body">
+                        <div class="dropdown dropright">
+                            <select class="form-select" id="dropdownCategoriaEditAtividade" aria-label="Default select example">
+                                <option value="1">YOGA</option>
+                                <option value="2">RECEITAS</option>
+                                <option value="3">JARDINAGEM</option>
+                                <option value="4">ARTES PLÁSTICAS</option>
+                            </select>
+                        </div>
+                        <br>
+                        <input type="text" class="form-control" name="nameEditAtividade" id="nameEditAtividade"
+                            aria-describedby="helpId" placeholder="NOME">
+                        <br>
+                        <input type="file" class="custom-file-input" name="imageEditAtividade" id="imageEditAtividade"
+                            aria-describedby="helpId" accept="image/png, image/jpeg">
+                        <br><br>
+                        <input type="file" class="custom-file-input" name="videoEditAtividade" id="videoEditAtividade"
+                            aria-describedby="helpId" accept="image/png, image/jpeg">
+                        <br><br>
+                        <textarea type="text" class="form-control" name="descriptionEditAtividade" id="descriptionEditAtividade"
+                            aria-describedby="helpId" placeholder="DESCRIÇÃO"></textarea>
+                        <br>
+                        <textarea type="text" class="form-control" name="materialsEditAtividade" id="materialsEditAtividade"
+                            aria-describedby="helpId" placeholder="MATERIAIS"></textarea>
+                        <br>
+                        <textarea type="text" class="form-control" name="stepsEditAtividade" id="stepsEditAtividade"
+                        aria-describedby="helpId" placeholder="STEPS"></textarea>
+                        <br>
+                        <input type="text" class="form-control" name="timeEditAtividade" id="timeEditAtividade"
+                            aria-describedby="helpId" placeholder="TIME Segundos">
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-success" data-dismiss="modal"
+                            id=btnEditLineAtividade>Confirmar</button>
+                        <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Fechar</button>
+                    </div>
                 </div>
 
-                <div class="modal-body">
-                    <input type="text" class="form-control" name="nameCategoria" id="nameCategoria" required
-                        aria-describedby="helpId" placeholder="NOME">
-                    <br>
-                    <input type="text" class="form-control" name="colorCategoria" id="colorCategoria" required
-                        aria-describedby="helpId" maxlength="6" placeholder="#HEXADECIMAL">
-                    <br>
-                    <input type="file" class="custom-file-input" name="iconCategoria" id="iconCategoria" required
-                        aria-describedby="helpId" accept="image/png, image/jpeg">
-                    <br><br>
-                    <textarea type="text" class="form-control" name="descriptionCategoria" id="descriptionCategoria"
-                        required aria-describedby="helpId" placeholder="DESCRIÇÃO"></textarea>
-                </div>
+            </div>
+        </div>
 
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-outline-success" data-dismiss="modal"
-                        id=btnAdicionarCategoria>Confirmar</button>
-                    <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Fechar</button>
+        <!-- Modal Delete User -->
+        <div class="modal fade" id="deleteUtilizadorModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Apagar Registo</h5>
+                        <button type="button" class="close btn btn-outline-secondary" data-dismiss="modal"
+                            aria-label="Close">
+                            <span aria-hidden="true">X</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <br>
+                        Tem a certeza que pretende apagar o registo ??
+                        <br><br>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-success" data-dismiss="modal"
+                            id=btnDeleteLineUtilizador>Confirmar</button>
+                        <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Fechar</button>
+                    </div>
                 </div>
             </div>
+        </div>
+
+        <!-- Modal Delete Categoria -->
+        <div class="modal fade" id="deleteCategoriaModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Apagar Registo</h5>
+                        <button type="button" class="close btn btn-outline-secondary" data-dismiss="modal"
+                            aria-label="Close">
+                            <span aria-hidden="true">X</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <br>
+                        Tem a certeza que pretende apagar o registo ??
+                        <br><br>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-success" data-dismiss="modal"
+                            id=btnDeleteLineCategoria>Confirmar</button>
+                        <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Delete Atividade -->
+        <div class="modal fade" id="deleteAtividadeModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Apagar Registo</h5>
+                        <button type="button" class="close btn btn-outline-secondary" data-dismiss="modal"
+                            aria-label="Close">
+                            <span aria-hidden="true">X</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <br>
+                        Tem a certeza que pretende apagar o registo ??
+                        <br><br>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-success" data-dismiss="modal"
+                            id=btnDeleteLineAtividade>Confirmar</button>
+                        <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Add Categoria -->
+        <div class="modal fade bd-example-modal-lg ModalAddCategoria" tabindex="-1" role="dialog"
+            aria-labelledby="myLargeModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Adicionar Categoria</h5>
+                        <button type="button" class="close btn btn-outline-secondary" data-dismiss="modal"
+                            aria-label="Close">
+                            <span aria-hidden="true">X</span>
+                        </button>
+                    </div>
+
+                    <div class="modal-body">
+                        <input type="text" class="form-control" name="nameCategoria" id="nameCategoria" required
+                            aria-describedby="helpId" placeholder="NOME">
+                        <br>
+                        <input type="text" class="form-control" name="colorCategoria" id="colorCategoria" required
+                            aria-describedby="helpId" maxlength="6" placeholder="#HEXADECIMAL">
+                        <br>
+                        <input type="file" class="custom-file-input" name="iconCategoria" id="iconCategoria" required
+                            aria-describedby="helpId" accept="image/png, image/jpeg">
+                        <br><br>
+                        <textarea type="text" class="form-control" name="descriptionCategoria" id="descriptionCategoria"
+                            required aria-describedby="helpId" placeholder="DESCRIÇÃO"></textarea>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-success" data-dismiss="modal"
+                            id=btnAdicionarCategoria>Confirmar</button>
+                        <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Modal Add Atividade -->
+        <div class="modal fade bd-example-modal-lg ModalAddAtividade" tabindex="-1" role="dialog"
+            aria-labelledby="myLargeModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Adicionar Atividade</h5>
+                        <button type="button" class="close btn btn-outline-secondary" data-dismiss="modal"
+                            aria-label="Close">
+                            <span aria-hidden="true">X</span>
+                        </button>
+                    </div>
+
+                    <div class="modal-body">
+                        <div class="dropdown dropright">
+                            <select class="form-select" id="dropdownCategoriaAtividade" aria-label="Default select example">
+                                <option value="1">YOGA</option>
+                                <option value="2">RECEITAS</option>
+                                <option value="3">JARDINAGEM</option>
+                                <option value="4">ARTES PLÁSTICAS</option>
+                            </select>
+                        </div>
+                        <br>
+                        <input type="text" class="form-control" name="nameAtividade" id="nameAtividade"
+                            aria-describedby="helpId" placeholder="NOME">
+                        <br>
+                        <input type="file" class="custom-file-input" name="imageAtividade" id="imageAtividade"
+                            aria-describedby="helpId" accept="image/png, image/jpeg">
+                        <br><br>
+                        <input type="file" class="custom-file-input" name="videoAtividade" id="videoAtividade"
+                            aria-describedby="helpId" accept="image/png, image/jpeg">
+                        <br><br>
+                        <textarea type="text" class="form-control" name="descriptionAtividade" id="descriptionAtividade"
+                            aria-describedby="helpId" placeholder="DESCRIÇÃO"></textarea>
+                        <br>
+                        <textarea type="text" class="form-control" name="materialsAtividade" id="materialsAtividade"
+                            aria-describedby="helpId" placeholder="MATERIAIS"></textarea>
+                        <br>
+                        <textarea type="text" class="form-control" name="stepsAtividade" id="stepsAtividade"
+                        aria-describedby="helpId" placeholder="STEPS"></textarea>
+                        <br>
+                        <input type="text" class="form-control" name="timeAtividade" id="timeAtividade"
+                            aria-describedby="helpId" placeholder="TIME Segundos">
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-success" data-dismiss="modal"
+                            id=btnAdicionarAtividade>Confirmar</button>
+                        <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div id="menuOverlay" class="back" onclick="menuOff()">
+
+            <h1 class="menu">MENU</h1>
+
+            <br><br><br>
+
+            <h2 class="menu"><a class="submenu" href="categoria.html">Atividades</a></h2>
+            <h2 class="menu"><a class="submenu" href="mapa.html">Encontrar Apoio</a></h2>
+            <h2 class="menu"><a class="submenu" href="estatistica.html">Estatistica</a></h2>
+            <button class="menu botaoLogout" onclick="logout()"><a href="registo.html"><img src="../img/exit.png"
+                        width="50px" height="50px"></a><span id="usernameMenu"></span></button>
 
         </div>
+
+        <br><br>
+        <h2 style="text-align: center;">Utilizadores</h2>
+        <br><br>
+
+        <table class="table" style="text-align: center;">
+            <thead>
+                <tr>
+                    <th>id</th>
+                    <th>username</th>
+                    <th>email</th>
+                    <th>password</th>
+                    <th>Atividades</th>
+                    <th>status</th>
+                    <th>Option</th>
+                </tr>
+            </thead>
+        </table>
+
+        <br><br>
+        <h2 style="text-align: center;">Categorias</h2>
+        <button type="button" class="btn btn-secondary btn-lg btn-add-cat" data-toggle="modal"
+            data-target=".ModalAddCategoria">Adicionar Categoria</button>
+        <br>
+            <div id="messages"></div>
+        <br>
+
+        <table class="table" style="text-align: center;">
+            <thead>
+                <tr>
+                    <th>id</th>
+                    <th>name</th>
+                    <th>color</th>
+                    <th>icon</th>
+                    <th>description</th>
+                    <th>Option</th>
+                </tr>
+            </thead>
+        </table>
+
+        <br><br>
+        <h2 style="text-align: center;">Atividades</h2>
+        <button type="button" class="btn btn-secondary btn-lg btn-add-cat" data-toggle="modal"
+            data-target=".ModalAddAtividade">Adicionar Atividades</button>
+        <br>
+            <div id="messages"></div>
+        <br>
+
+        <table class="table" style="text-align: center;">
+            <thead>
+                <tr>
+                    <th>id</th>
+                    <th>idCategoria</th>
+                    <th>name</th>
+                    <th>image</th>
+                    <th>video</th>
+                    <th>description</th>
+                    <th>likes</th>
+                    <th>views</th>
+                    <th>materials</th>
+                    <th>steps</th>
+                    <th>time</th>
+                    <th>date</th>
+                    <th>Option</th>
+                </tr>
+            </thead>
+        </table>
     </div>
-
-    <div id="menuOverlay" class="back" onclick="menuOff()">
-
-        <h1 class="menu">MENU</h1>
-
-        <br><br><br>
-
-        <h2 class="menu"><a class="submenu" href="categoria.html">Atividades</a></h2>
-        <h2 class="menu"><a class="submenu" href="mapa.html">Encontrar Apoio</a></h2>
-        <h2 class="menu"><a class="submenu" href="estatistica.html">Estatistica</a></h2>
-        <button class="menu botaoLogout" onclick="logout()"><a href="registo.html"><img src="../img/exit.png"
-                    width="50px" height="50px"></a><span id="usernameMenu"></span></button>
-
-    </div>
-
-    <br><br>
-    <h2 style="text-align: center;">Utilizadores</h2>
-    <br><br>
-
-    <table class="table" style="text-align: center;">
-        <thead>
-            <tr>
-                <th>id</th>
-                <th>username</th>
-                <th>email</th>
-                <th>password</th>
-                <th>Atividades</th>
-                <th>status</th>
-                <th>Option</th>
-            </tr>
-        </thead>
-    </table>
-
-    <br><br>
-    <h2 style="text-align: center;">Categorias</h2>
-    <button type="button" class="btn btn-secondary btn-lg btn-add-cat" data-toggle="modal"
-        data-target=".bd-example-modal-lg">Adicionar Categoria</button>
-    <br>
-    <div id="messages"></div>
-    <br>
-
-    <table class="table" style="text-align: center;">
-        <thead>
-            <tr>
-                <th>id</th>
-                <th>name</th>
-                <th>color</th>
-                <th>icon</th>
-                <th>description</th>
-                <th>Option</th>
-            </tr>
-        </thead>
-    </table>
-
-    <br><br>
-    <h2 style="text-align: center;">Atividades</h2>
-    <br><br>
-
-    <table class="table" style="text-align: center;">
-        <thead>
-            <tr>
-                <th scope="row">id</th>
-                <th>idCategoria</th>
-                <th>name</th>
-                <th>image</th>
-                <th>video</th>
-                <th>description</th>
-                <th>materials</th>
-                <th>steps</th>
-                <th>time</th>
-                <th>Option</th>
-            </tr>
-        </thead>
-        <tbody class="tableAtividades">
-            <tr>
-                <td scope="row"></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-        </tbody>
-    </table>
-
 </body>
+
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col">
+                <ul class="ulFooter">
+                    <li><a href="../html/categoria.html">
+                            <h4>ATIVIDADES</h4>
+                        </a></li>
+                    <li><a href="../html/mapa.html">
+                            <h4>ENCONTRAR APOIO</h4>
+                        </a></li>
+                    <li><a href="../html/estatistica.html">
+                            <h4>ESTATÍSTICAS</h4>
+                        </a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <ul class="ulFooter">
+                    <li>
+                        <h4>LOCALIZAÇÃO E CONTACTOS</h4>
+                    </li>
+                    <li>Rua D.Sancho I, nº 981</li>
+                    <li>4480-876 Vila do Conde, Portugal</li>
+                    <li>T. +351 252 291 700</li>
+                    <li>E. geral@esmad.ipp.pt</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <ul class="ulFooter">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <ul class="ulFooter">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</footer>
 
 <script type="module" src="../js/app.js"></script>
 <script src="../js/controllers/statusController.js"></script>
