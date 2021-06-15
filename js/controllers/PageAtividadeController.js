@@ -28,7 +28,7 @@ export default class PageAtividadeController {
                 <td>
                     <div class="imagemAtividade" style="background-color:#${this.categorias[(this.atividades[j].idCategoria)-1].color};">
                     <span class="nomeAtividade">${this.atividades[j].name}</span>
-                    <img class="iconAtividade" src="../img/${this.atividades[j].image}" width="150px" height="150px">
+                    <img class="iconAtividade" src="../img/iconsAtividades/${this.atividades[j].image}" width="150px" height="150px">
                     <div class="imgOverlay"><a class="linkVerMaisAtividade" href="#"><div class="verMais"><span>VER MAIS</span></div></a></div>
                     </div>
                 </td>

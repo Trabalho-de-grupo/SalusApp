@@ -28,7 +28,7 @@ export default class PageCategoriaController {
                     <td>
                         <div class="imagemCategoria" style="background-color:#${this.categorias[j].color};">
                         <span class="nomeCategoria">${this.categorias[j].name}</span>
-                        <img class="iconCategoria" src="../img/${this.categorias[j].icon}" width="150px" height="150px">
+                        <img class="iconCategoria" src="../img/iconsAtividades/${this.categorias[j].icon}" width="150px" height="150px">
                         <div class="imgOverlay"><a class="linkVerMais" href="#"><div class="verMais"><span>VER MAIS</span></div></a></div>
                         </div>
                     </td>
