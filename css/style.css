@@ -209,13 +209,6 @@
     margin-left: 7%;
 }
 
-.imagemCategoria {
-    width: 300px;
-    height: 200px;
-    margin: 50px;
-    background: #F6B8C3;
-    border-radius: 5px 5px 5px 5px;
-}
 
 
 .tableAtividade {
@@ -290,7 +283,7 @@ header li {
 
 .footer {
     background-color: #A8A8A7;
-    padding: 70px 0;
+    padding: 4% 0;
 
 }
 
@@ -301,7 +294,7 @@ header li {
 .row {
     display: flex;
     flex-wrap: wrap;
-    margin-left: 100px;
+    margin-left: 7%;
 
 }
 
@@ -311,7 +304,7 @@ header li {
 
 .footer-col {
     width: 50%;
-    padding: 0 15px;
+    padding: 0 3%;
 }
 
 .footer-col h4 {
@@ -320,6 +313,7 @@ header li {
 
 .footer-col ul li a {
     text-decoration: none;
+    color: white;
 }
 
 .footer-col li {
@@ -545,7 +539,68 @@ header li {
     left: 50%;
     transform: translate(-50%);
 }
+.imagemCategoria {
+    width: 300px;
+    height: 200px;
+    margin: 50px;
+    border-radius: 5px 5px 5px 5px;
+    position: relative;
+    text-align: center;
+}
 .nomeCategoria{
-    float: left;
-
+    position: absolute;
+    top:1%;
+    left: 5%;
+}
+.iconCategoria{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.linkVerMais{
+    text-decoration: none;
+    color: #706F6F;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+.verMais{
+    width: 100px;
+    height: 40px;
+    background:#EEEEEE;
+    border-radius: 5px 5px 5px 5px;
+    position: relative;
+    text-align: center;
+}
+.verMais:hover{
+    color:#706F6F;
+}
+.imgOverlay{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height: 100%;
+    background:rgb(112, 111, 111, 0.8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+}
+.imgOverlay:hover{
+    opacity: 1;
+}
+#chart{
+    margin-right: 50%;
+    margin-top: 5%;
+}
+.descCategoria{
+    padding-right: 10%;
+    padding-left: 10%;
+    padding-top:0;
+    padding-bottom: o;
 }

@@ -72,9 +72,9 @@ export default class AtividadeController {
         Object.values(this.atividades).forEach(atividade => {
             if (atividade.id == chave.innerHTML) {
                 name.setAttribute('placeholder', atividade.name)
-                desc.setAttribute('placeholder', atividade.description)
-                materials.setAttribute('placeholder', atividade.materials)
-                steps.setAttribute('placeholder', atividade.steps)
+                desc.setAttribute('value', atividade.description)
+                materials.setAttribute('value', atividade.materials)
+                steps.setAttribute('values', atividade.steps)
                 time.setAttribute('placeholder', atividade.time)
             }
         })
