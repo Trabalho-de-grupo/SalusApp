@@ -4,6 +4,5 @@ export default class AtividadeView {
     constructor() {
         this.PageAtividadeController = new PageAtividadeController();
         
-        console.log("oi")
     }
 }
