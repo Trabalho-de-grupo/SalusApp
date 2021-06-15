@@ -481,7 +481,7 @@ header li {
 
 .numeros {
     color: #E72168;
-    text-align: right;
+    float: right;
     font-size: 30px;
 }
 
@@ -627,7 +627,6 @@ header li {
     opacity: 1;
 }
 #chart{
-    margin-right: 50%;
     margin-top: 5%;
 }
 .descCategoria{
