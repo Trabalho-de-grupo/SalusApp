@@ -16,7 +16,7 @@ export default class CategoriaController {
                 const newId = this.categorias.length > 0 ? this.categorias[this.categorias.length - 1].id + 1 : 1
                 let iconPath = icon.value
                 let iconPath2 = iconPath.substring(iconPath.lastIndexOf("\\") + 1)
-                this.categorias.push(new CategoriaModel(newId, name.value, color.value, iconPath2, description.value));
+                this.categorias.push(new CategoriaModel(newId, name.value.toUpperCase(), color.value, iconPath2, description.value));
                 localStorage.setItem('categorias', JSON.stringify(this.categorias));
                 location.reload();
             }
